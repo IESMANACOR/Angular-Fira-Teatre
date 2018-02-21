@@ -1,0 +1,77 @@
+<main>
+  <div class="col-1 d-inline-block"></div>
+  <div class="divCartell d-inline-block" *ngFor='let espectacle of detallEspectacle.detalls'>
+    <img src="assets/imatges/{{espectacle.codi}}/{{espectacle.foto}}" alt="" class="fotoCartell">
+  </div>
+  <!--
+    -->
+  <div *ngFor='let espectacle of detallEspectacle.detalls' class="col-4 d-inline-block align-top">
+    <br>
+    <p class="textEspectacle d-inline-block">Títol : </p>
+    <p class="d-inline-block"> {{espectacle.titol}}</p><br>
+    <p class="textEspectacle d-inline-block">Gènere : </p>
+    <p class="d-inline-block"> {{espectacle.nomGenere}}</p><br>
+    <p class="textEspectacle d-inline-block">Tipus d'espectacle : </p>
+    <p class="d-inline-block"> {{espectacle.nomTipus}}</p><br>
+    <p class="textEspectacle d-inline-block">Edat Recomanada : </p>
+    <p class="d-inline-block"> {{espectacle.edatRecomanada}}</p><br>
+    <p class="textEspectacle d-inline-block">Duració : </p>
+    <p class="d-inline-block"> {{espectacle.duracio}} min</p><br>
+    <p class="textEspectacle d-inline-block">Companyía :</p>
+    <p class="d-inline-block"> {{espectacle.nomCompanyia}}</p><br>
+    <p class="textEspectacle d-inline-block">Preu :</p>
+    <p class="d-inline-block"> {{espectacle.preu}} €</p><br>
+
+  </div>
+  <div class="col-4 d-inline-block align-top">
+    <br>
+    <p class="font-weight-bold">Sinòpsi :</p>
+    <p class="pl-2" *ngFor='let espectacle of detallEspectacle.detalls'> {{espectacle.sinopsi}}</p>
+
+    <p class="font-weight-bold">Director : </p>
+    <p class="pl-2" *ngFor='let espectacle of detallEspectacle.director'> {{espectacle.nom}} {{espectacle.llinatge1}} {{espectacle.llinatge2}}</p>
+
+    <p class="font-weight-bold">Actors : </p>
+    <ul>
+      <li *ngFor='let espectacle of detallEspectacle.actor'>{{espectacle.nom}} {{espectacle.llinatge1}} {{espectacle.llinatge2}}</li>
+    </ul>
+  </div>
+  <div class="d-inline-block col-12">
+    <br>
+  </div>
+  <div class="col-12 border">
+    <div class="col-1 d-inline-block"></div>
+    <div class="col-5 d-inline-block">
+      <p class="font-weight-bold d-inline-block">Pròximes sessions : </p>
+      <p id="clicka" class="sessionsPassades d-inline-block">(fes click aqui per veure les sessions passades)</p><br><br>
+      <p *ngFor='let sessio of detallEspectacle.sessio'> Data : {{sessio.dataBona}} Hora : {{sessio.hora}} Seients Disponibles : {{sessio.seientsDisponibles}} Preu de la Sessio : {{sessio.preu}} </p>
+      <div id="obri">
+        <p *ngFor='let sessio of detallEspectacle.sessionsPassades'>Data : {{sessio.dataBona}} Hora : {{sessio.hora}}</p>
+      </div>
+    </div>
+    <!--
+        -->
+    <div class="col-5 d-inline-block">
+      <a href=""><button type="button" class="btn-lg btn btn-primary float-right" name="button">Comprar</button></a>
+    </div>
+    <div class="col-1 d-inline-block"></div>
+  </div>
+  <div class="col-12">
+    <div class="col-1 d-inline-block"></div>
+    <div class="col-10 d-inline-block">
+      <h2>Comentaris : </h2>
+      <div class="col-10 form-group">
+        <textarea type="text" class="form-control col-sm-12" name="comentari" placeholder="Inserti el seu comentari..." rows="5"></textarea><br>
+        <button class="btn btn-primary float-right">Enviar</button><br>
+      </div><div class="pl-5">
+      <h3> Altres comentaris :</h3>
+      <div *ngFor='let comentari of detallEspectacle.comentari'>
+        <p class="font-weight-bold d-inline-block"> {{comentari.nomUsuari}} ha dit :</p>
+        <p class="d-inline-block"> {{comentari.contingut}}</p><br>
+      </div>
+      </div>
+    </div>
+    <div class="col-1 d-inline-block"></div>
+  </div>
+
+</main>

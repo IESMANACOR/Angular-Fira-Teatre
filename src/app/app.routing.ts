@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 import { CarretComponent } from './carret/carret.component';
 import { Calendari2Component } from './calendari2/calendari2.component';
 import { FaqComponent } from './faq/faq.component';
+import {DetallEspectacleComponent} from './detall-espectacle/detall-espectacle.component'
 
 const APP_ROUTES: Routes=[
 {path:'espectacles',component:EspectaclesComponent},
@@ -17,6 +18,7 @@ const APP_ROUTES: Routes=[
 {path:'carret',component:CarretComponent},
 {path:'calendari',component:Calendari2Component},
 {path:'formulari/faq',component:FaqComponent},
-{ path: '', component: HomeComponent }
+{path: '', component: HomeComponent },
+{path:'detallEspectacle/:id',component:DetallEspectacleComponent}
 ];
 export const routing=RouterModule.forRoot(APP_ROUTES);

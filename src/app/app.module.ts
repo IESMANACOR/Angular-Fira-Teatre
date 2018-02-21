@@ -15,6 +15,7 @@ import { EspectacleService } from './espectacles/espectacle.service';
 import { RegistreService } from './registre/registre.service';
 import { ComprarService } from './comprar/comprar.service';
 import { CarretService } from './carret/carret.service';
+import { DetallService } from './detall-espectacle/detall-espectacle.service';
 
 
 import { RegistreComponent } from './registre/registre.component';
@@ -33,6 +34,7 @@ import { CarretComponent } from './carret/carret.component';
 import { Calendari2Component } from './calendari2/calendari2.component';
 import { FaqComponent } from './faq/faq.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { DetallEspectacleComponent } from './detall-espectacle/detall-espectacle.component';
 
 
 @NgModule({
@@ -50,7 +52,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     HomeComponent,
     CarretComponent,
     Calendari2Component,
-    FaqComponent
+    FaqComponent,
+    DetallEspectacleComponent
   ],
   imports: [
     BrowserModule,
@@ -64,7 +67,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
    NgbModule
     
   ],
-  providers: [EspectacleService, RegistreService,ComprarService,CarretService],
+  providers: [DetallService,EspectacleService, RegistreService,ComprarService,CarretService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

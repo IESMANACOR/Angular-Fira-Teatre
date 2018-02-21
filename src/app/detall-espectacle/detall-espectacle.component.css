@@ -1,0 +1,40 @@
+.divCartell {
+    height: 520px;
+    width: 420px;
+  }
+
+  .textEspectacle {
+    padding: 1%;
+    padding-left: 6%;
+    font-weight: bold;
+  }
+
+  .sessionsPassades {
+    font-size: 13px;
+  }
+
+  img.fotoCartell {
+    height: 100%;
+    width: 100%;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 1%;
+    margin-bottom: 0%;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    columns: 2;
+list-style-position: inside
+  }
+
+
+  li:before {
+    content: "•";
+    padding-right: 8px;
+    color: #EEBE3B;
+  }
