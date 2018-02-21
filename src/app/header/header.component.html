@@ -1,0 +1,98 @@
+
+<header class="row">
+ 
+  <div class="col-12">
+    <nav style="background-color:transparent; height:40px;" class="row pr-4 ">
+
+
+   
+        <ul style="margin:0px; margin-left:auto;" class="row ">
+          <li class="">
+            <a class="navElement" href="">
+              <i class="fab fa-youtube white-text mr-3 faheader"> </i>
+            </a>
+          </li>
+          <li class="">
+            <a class="navElement" href="">
+              <i class="fab fa-facebook white-text mr-3 faheader"> </i>
+            </a>
+          </li>
+          <li class="">
+            <a class="navElement" href="">
+              <i class="fab fa-twitter white-text mr-3 faheader"> </i>
+            </a>
+          </li>
+          <li class="">
+            <a class="navElement" href="">
+              <i class="fab fa-instagram white-text mr-3 faheader"> </i>
+            </a>
+          </li>
+          <li class="">
+            <a class="navElement ml-2 active" href="">ES</a><span class="navElement">/</span>
+          </li>
+          <li class="">
+            <a class="navElement " href="">CAT</a><span class="navElement">/</span>
+          </li>
+          <li class="">
+            <a class="navElement" href="">EN</a>
+          </li>
+          <li class="">
+            <a class="navElement ml-5" href=""> Perfil
+              <i class="fa fa-user ml-2 faheader"></i>
+            </a>
+          </li>
+        </ul>
+
+      
+    </nav>
+
+    <nav class="headnav navbar navbar-expand-lg navbar-light bg-faded"> 
+      <a style="color:transparent" class="navbar-brand" href="#"><img src="assets/FT-blanco.svg" height="69px;" alt=""></a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="nav navbar-nav ml-auto">
+          <li class="nav-item ">
+            <a class="nav-link navElement active" href="#" [routerLink]="['inici']">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link navElement" href="#" [routerLink]="['espectacles']">Espectacles</a>
+          </li>
+          
+          <li class="nav-item ">
+            <a class="nav-link navElement" href="#" [routerLink]="['calendari']">Calendari</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link navElement" href="#" [routerLink]="['formulari']">Contacte</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link navElement" href="#">Qui Som?</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link navElement" href="#" [routerLink]="['comprar']">Comprar</a>
+          </li>
+          <li>
+              <div id="cart-container">
+                  <a href="#" [routerLink]="['carret']">
+                  <div id="cart">
+                    <i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i>
+                  </div>
+                  <span id="itemCount">{{quantitat}}</span>
+                </a>
+                </div>
+          </li>
+          
+        </ul>
+
+      </div>
+    </nav>
+
+
+  </div>
+
+</header>

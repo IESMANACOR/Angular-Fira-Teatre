@@ -1,0 +1,79 @@
+<div style="height: 160px;"></div>
+<div class="container">
+  <div class="row">
+      <div class="col-md-8 col-xs-12" id="formulari">
+               <h2>Envia'ns un missatge</h2>
+              <br/>
+              <p>
+                Pots fer-nos arribar els teus suggeriments omplint el formulari. <br>Si ho prefereixes també pots escriure a contacto.dawman@gmail.com.
+                <br>Tan aviat com ens sigui possible, llegirem el teu missatge i t'enviarem una resposta.
+              </p>
+            <form id="main-contact-form" class="contact-form" name="contact-form" (ngSubmit)="onSubmit(fm)" #fm="ngForm">
+              <div class="form-group col-md-12 col-xs-12">
+                  <label>Nom i Llinatges</label>
+                  <input type="text" class="form-control col-md-9 col-xs-12" id="nom" name="nom" ngModel > 
+              </div>
+
+              <div class="form-group col-md-12 col-xs-12">
+                    <label>E-mail</label>
+                  <input type="email" class="form-control col-md-9 col-xs-12" id="email" name="email" ngModel >
+              </div>
+
+              <div class="form-group col-md-12 col-xs-12">
+                    <label>Asumpte</label>
+                  <input type="text" class="form-control col-md-9 col-xs-12" id="tema" name="tema" ngModel>
+              </div>
+
+              <div class="form-group col-md-12 col-xs-12">
+                    <label>Missatge</label>
+                  <textarea type="text" class="form-control col-md-9 col-xs-12" id="missatge" name="missatge" ngModel></textarea>
+              </div>
+
+              <div class="form-group">
+              </div>
+              <br/>
+              <div>
+                  <button type="submit" class="btn btn-success col-md-9 col-xs-12" id="submit" name="submit">Enviar</button>
+              </div>
+            </form>
+          </div>
+          <div class="scroll col-md-4 col-xs-12">
+
+              <h5>Sala 1</h5>
+              <p><i class="fas fa-map-marker"></i> Direccio de la sala 1</p>
+              <p><i class="far fa-envelope"></i> correu@sala1.com</p>
+              <p><i class="fas fa-phone"></i> 123456789 </p>
+
+              <h5>Sala 2</h5>
+              <p><i class="fas fa-map-marker"></i> Direccio de la sala 2</p>
+              <p><i class="far fa-envelope"></i> correu@sala2.com</p>
+              <p><i class="fas fa-phone"></i> 123456789 </p>
+
+              <h5>Gran Sala</h5>
+              <p><i class="fas fa-map-marker"></i> Direccio de la sala 1</p>
+              <p><i class="far fa-envelope"></i> correu@gransala.com</p>
+              <p><i class="fas fa-phone"></i> 123456789 </p>
+
+              <h5>Gran Sala</h5>
+              <p><i class="fas fa-map-marker"></i> Direccio de la sala 1</p>
+              <p><i class="far fa-envelope"></i> correu@gransala.com</p>
+              <p><i class="fas fa-phone"></i> 123456789 </p>
+
+              <h5>Gran Sala</h5>
+              <p><i class="fas fa-map-marker"></i> Direccio de la sala 1</p>
+              <p><i class="far fa-envelope"></i> correu@gransala.com</p>
+              <p><i class="fas fa-phone"></i> 123456789 </p>
+              
+          </div>
+</div>
+  <div class="row col-md-12 col-xs-12">
+        <div class="col-md-9 col-xs-12" id="dades">
+          <h4>Dades de contacte</h4>
+          <br>
+          <p><i class="fas fa-phone"></i> 123456789</p><p><i class="far fa-envelope"></i> correu@firateatre.com</p>
+        </div>
+        <div class="col-md-3 col-xs-12" id="faq">
+            <a href="#" class="btn btn-light nav-link btn-sm" role="button" [routerLink]="['faq']"><i class="fas fa-question-circle"></i>FAQ</a>
+        </div>
+  </div>
+  </div>

@@ -1,0 +1,159 @@
+<section style="padding-top: 20px" >
+
+	<div class="container">
+		<div class="col-md-12 pl-5 pt-4 d-md-block">
+			<div class="col-md-6 col-8 d-inline-block">
+				<h4>
+					<i class="fas fa-filter"></i> Filtres</h4>
+
+			</div><div 
+			class="col-md-6 col-4 d-none borrar-f" hidden>
+				<button class="btn btn-outline-danger float-right" id="borr-filtre">
+					<i class="far fa-times-circle"></i>Borrar</button>
+			</div>
+
+
+		</div>
+		<hr>
+		<div class="w-100 pr-5 pl-5">
+			<div class="form-group row">
+				<div class="col-md-4 col-12 d-md-block filtre">
+
+					<div class="col-12 col-md-12 tip-h pt-2 pb-1 p-tipus">
+						<h5>Per tipus
+							<i class="fas fa-plus float-right add-tipus"></i>
+							<i class="fas fa-minus float-right m-tipus"></i>
+						</h5>
+					</div>
+
+					<div id="formulari-tipus">
+
+						<form id="tipus-form">
+
+							<div *ngFor="let type of tipus" class="col-12" style="padding-left:40px">
+
+
+								<label class="form-check-label">
+									<input type="radio" class="form-check-input" name="tipusRadio" id="tipusRadio" value="{{type.codi}}"> {{type.nom[1].nom}}
+								</label>
+
+							</div>
+						</form>
+
+					</div>
+				</div>
+				<div class="col-md-4 col-12 d-md-block filtre">
+
+					<div class="col-12 col-md-12 gen-h pt-2 pb-1 p-genere">
+						<h5>Per gènere
+							<i class="fas fa-plus float-right add-genere"></i>
+							<i class="fas fa-minus float-right m-genere"></i>
+						</h5>
+					</div>
+
+
+					<div id="formulari-genere">
+
+						<form id="genereForm">
+
+							<div *ngFor="let genere of generes" class="col-12" style="padding-left:40px">
+
+								<label class="form-check-label">
+									<input class="form-check-input" type="checkbox" name="genereCheck" value="{{genere.codi}}"> {{genere.nom[1].nom}}
+								</label>
+
+
+							</div>
+						</form>
+
+					</div>
+				</div>
+
+				<div class="col-md-4 col-12 d-md-block filtre">
+
+					<div class="col-12 col-md-12 edat-h pt-2 pb-1 p-edat">
+						<h5>Per edat
+							<i class="fas fa-plus float-right add-edat"></i>
+							<i class="fas fa-minus float-right m-edat"></i>
+						</h5>
+					</div>
+
+					<div id="formulari-edat">
+
+						<form id="edatForm">
+
+							<div class="col-12" style="padding-left:40px">
+								<label class="form-check-label">
+									<input type="radio" class="form-check-input" name="edatRadio" id="genereRadio" value="Tots els publics"> Tots els publics
+								</label>
+
+							</div>
+							<div class="col-12" style="padding-left:40px">
+								<label class="form-check-label">
+									<input type="radio" class="form-check-input" name="edatRadio" id="genereRadio" value="Majors de 7 anys"> Majors de 7 anys
+								</label>
+
+							</div>
+							<div class="col-12" style="padding-left:40px">
+								<label class="form-check-label">
+									<input type="radio" class="form-check-input" name="edatRadio" id="genereRadio" value="Majors de 12 anys"> Majors de 12 anys
+								</label>
+
+							</div>
+							<div class="col-12" style="padding-left:40px">
+								<label class="form-check-label">
+									<input type="radio" class="form-check-input" name="edatRadio" id="genereRadio" value="Majors de 16 anys"> Majors de 16 anys
+								</label>
+
+							</div>
+							<div class="col-12" style="padding-left:40px">
+								<label class="form-check-label">
+									<input type="radio" class="form-check-input" name="edatRadio" id="genereRadio" value="Majors de 18 anys"> Majors de 18 anys
+								</label>
+
+							</div>
+
+						</form>
+
+					</div>
+				</div>
+
+				</div>
+		</div>
+		<hr>
+	</div>
+
+</section>
+<section class="pb-3">
+
+	<div class="container pt-5">
+
+
+		<div class="col-12 pt-2 d-inline-block aqui">
+
+			<div *ngFor="let espectacle of espectacles;  let i=index" class="d-inline-block col-12 col-sm-6 col-md-3 align-top pt-2 obra">
+
+				<div class="col-12 col-md-12 div1 foto">
+					<div class="with-100 imatge" style="height: 300px;">
+
+						<img style="height: 100%; width: 100%" src="/assets/imatges/{{espectacle.codi}}/{{espectacle.foto}}" alt="foto">
+						
+
+					</div>
+					<div style="position:absolute;left:0px;top:258px" class="col-12 col-md-12 pt-1 botons d-none">
+						<button class="btn btn-primary btn-block">Veure Fitxa</button>
+					</div>
+					<div class="col-12 col-md-12 titol-o">
+						<p class="text-center"> {{espectacle.titol[1].titol}}</p>
+
+					</div>
+					
+
+				</div>
+			</div>
+			</div>
+
+
+	</div>
+
+</section>

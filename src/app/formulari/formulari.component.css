@@ -1,0 +1,80 @@
+
+
+@media (min-width: 576px) and (max-width: 767.98px) { }
+
+@media (min-width: 768px) and (max-width: 991.98px) { 
+ 
+#faq{
+    padding-top: 80px;
+    padding-left: 10px;
+    
+}
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {  }
+
+@media (min-width: 1200px) {  }
+
+@media (max-width: 575.98px) { 
+    #faq{
+        padding-top: 10px; 
+    }
+ }
+
+
+body {
+    background:#333;
+}
+.form_bg {
+    background-color:rgb(238, 238, 238);
+    color:#666;
+    padding:10px;
+    border-radius:10px;
+    position: absolute;
+    border:1px solid #fff;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 320px;
+    height: 350px;
+}
+.align-center {
+    text-align:center;
+}
+
+input.ng-invalid.ng-touched
+{
+  border-color: red;
+}
+
+.container{
+    padding-left: 20px;
+}
+
+.formulari{
+    display: inline-block;
+}
+
+div.form-group{
+    padding-left: 0px;
+}
+
+h5{
+    padding-top: 40px;
+}
+
+#dades{
+    padding-top: 40px;
+}
+
+
+body[_ngcontent-c1] {
+    background: white;
+}
+
+div.scroll {
+    overflow: scroll;
+    height: 618px;
+    overflow-x: hidden;
+}

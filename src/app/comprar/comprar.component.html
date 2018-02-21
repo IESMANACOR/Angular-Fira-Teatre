@@ -1,0 +1,58 @@
+
+
+<section class="pt-4 pb-4">
+  <div class=" d-inline-block col-md-12 col-12">
+    <button type="button" class="btn btn-outline-primary btn-lg btn-block" id="entrada">Entrades</button>
+  </div>
+<div class="container" id="ent">
+
+
+ <form (ngSubmit)="postProfile()" [formGroup]="formulari">
+  <div class="form-group">
+    <label for="espectacle">Example select</label>
+    <select class="form-control" id="espectacle"  formControlName="espectacle" required>
+        <option selected="true" disabled="disabled">Espectacle</option>
+      <option *ngFor="let espectacle of espectacles" value="{{espectacle.codi}}">
+        {{espectacle.titol[1].titol}}</option>
+    </select>
+  </div>
+  <div class="sessions col-12 col-md-12">
+    <div class="form-group">
+      <label for="select-entrades">Example select</label>
+      <select class="form-control" id="select-entrades" formControlName="sessio" required>
+          
+        
+      </select>
+    </div>
+</div>
+<button class="btn btn-primary" type="submit" >Comprar</button>
+</form>
+
+
+</div>
+<div class="container" id="abo">
+
+  <div class="form-group">
+    <label for="abono">Tipus Abonament</label>
+    <select class="form-control" id="abono">
+        <option selected="true" disabled="disabled">Abonament</option>
+      <option *ngFor="let abonament of abonaments" value="{{abonament.numEntrades}}">
+        {{abonament.nom}} | nº entrades: {{abonament.numEntrades}}</option>
+    </select>
+  </div>
+  <div class="ses-abo col-12 col-md-12">
+
+
+
+
+
+
+  </div>
+
+
+</div>
+
+
+
+
+</section>

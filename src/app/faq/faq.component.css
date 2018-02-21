@@ -1,0 +1,32 @@
+
+@media (min-width: 576px) and (max-width: 767.98px) { }
+
+@media (min-width: 768px) and (max-width: 991.98px) {  
+
+body{
+    font-size: 20px;
+}
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {  }
+
+@media (min-width: 1200px) {  }
+
+@media (max-width: 575.98px) {
+
+    body{
+        font-size: 12px;
+    }
+}
+#titol{
+    text-align: center;
+}
+
+.ngb-accordion { width: 250px;
+	     border-bottom: solid 1px black;}
+.acordeon h3:hover { background-color: #ccecff;}
+.acordeon h3.active { background-position: right 5px;}
+
+.config-panel-one{
+    color: black;
+    }
