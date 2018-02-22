@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-
 import { routing } from './app.routing'
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
@@ -36,6 +35,10 @@ import { FaqComponent } from './faq/faq.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { DetallEspectacleComponent } from './detall-espectacle/detall-espectacle.component';
 
+const routes: Routes = [
+
+];
+
 
 @NgModule({
   declarations: [
@@ -64,10 +67,12 @@ import { DetallEspectacleComponent } from './detall-espectacle/detall-espectacle
     HttpClientModule,
   // FullCalendarModule,
    ReactiveFormsModule,
-   NgbModule
-    
+   NgbModule,
+   RouterModule.forRoot(routes, { useHash: true })
+
   ],
   providers: [DetallService,EspectacleService, RegistreService,ComprarService,CarretService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+
 })
 export class AppModule { }
