@@ -11,7 +11,7 @@ import {DetallEspectacleComponent} from './detall-espectacle/detall-espectacle.c
 
 const APP_ROUTES: Routes=[
 {path:'espectacles',component:EspectaclesComponent},
-{path:'registre',component:RegistreComponent},
+{path:'carret/registre',component:RegistreComponent},
 {path:'formulari',component:FormulariComponent},
 {path:'comprar',component:ComprarComponent},
 {path:'inici',component:HomeComponent},
@@ -19,6 +19,6 @@ const APP_ROUTES: Routes=[
 {path:'calendari',component:Calendari2Component},
 {path:'formulari/faq',component:FaqComponent},
 {path: '', component: HomeComponent },
-{path:'detallEspectacle/:id',component:DetallEspectacleComponent}
+{path:'espectacles/detallEspectacle/:id',component:DetallEspectacleComponent}
 ];
 export const routing=RouterModule.forRoot(APP_ROUTES);

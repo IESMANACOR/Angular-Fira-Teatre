@@ -191,7 +191,7 @@ export class EspectaclesComponent implements OnInit {
 
 
 						$(".aqui").append("<div class='d-inline-block col-12 col-sm-6 col-md-3 align-top pt-2 f-obra'><div class='col-12 col-md-12'><div class='with-100' style='height: 300px;'><img style='height: 100%; width: 100%' src='/assets/imatges/" + field[0].codi + "/" + field[0].foto + "' alt='foto'></div><div class='col-12 col-md-12'><p class='text-center'>" + field[1].titol + "</p></div></div></div></div>");
-
+						$(".aqui")
 
 
 					});

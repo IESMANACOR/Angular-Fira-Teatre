@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RegistreService } from './registre.service';
+import { NgForm,FormControl,FormGroup,Validators } from '@angular/forms';
+
 
 declare var jquery:any;
 declare var $ :any;
@@ -11,10 +13,34 @@ declare var $ :any;
 })
 export class RegistreComponent implements OnInit {
 
-  constructor(private service: RegistreService) { }
+  formulari:FormGroup;
+
+
+  constructor(private service: RegistreService) { 
+    this.formulari=new FormGroup({
+      nom:new FormControl("",[Validators.required]),
+      llinatge1:new FormControl("",[Validators.required]),
+      llinatge2:new FormControl("",[Validators.required]),
+      adreça:new FormControl("",[Validators.required]),
+      pais:new FormControl("",[Validators.required]),
+      comunitat:new FormControl("",[Validators.required]),
+      ciutat:new FormControl("",[Validators.required]),
+      email:new FormControl("",[Validators.required]),
+      dni:new FormControl("",[Validators.required]),
+    });
+   }
 
   ciutats;
   paisos;
+
+  enviarFormulari(){
+    console.log(JSON.stringify(this.formulari.value));
+
+    this.service.altaUsuari();
+    console.log("enviat");
+  }
+
+
 
   llistaCiutats() {
 

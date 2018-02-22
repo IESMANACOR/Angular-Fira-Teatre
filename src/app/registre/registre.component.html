@@ -1,29 +1,34 @@
 
-<div style="padding-top:180px" class="container">
+<div class="container">
 
-	<h1 class="text-center">Formulari de registre</h1>
+	<h1 class="text-center">Dades personals</h1>
 	<br>
-<h3>Dades personals</h3>
+
+	<form [formGroup]="formulari" (ngSubmit)="enviarFormulari()">
 	<div class="form-group row">
 		<div class="col-md-4">
 			<label for="nom">Nom</label>
-			<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nom">
+			<input type="text" class="form-control" id="nom"  formControlName="nom" placeholder="Nom" required>
 		</div>
 		<div class="col-md-4">
 			<label for="llinatge1">Llinatge 1</label>
-			<input type="text" class="form-control" id="llinatge2" placeholder="Primer llinatge">
+			<input type="text" class="form-control" id="llinatge1" formControlName="llinatge1" placeholder="Primer llinatge" required>
 		</div>
 		<div class="col-md-4">
 			<label for="llinatge2">Llinatge 2</label>
-			<input type="text" class="form-control" id="llinatge2" placeholder="Segon Llinatge">
+			<input type="text" class="form-control" id="llinatge2" formControlName="llinatge2" placeholder="Segon Llinatge" required>
 		</div>
 	</div>
 
 	<div class="form-group row">
+			<div class="col-md-3">
+					<label for="adreça">Adreça</label>
+					<input type="text" class="form-control" id="adreça" formControlName="adreça" placeholder="Adreça" required>
+				  </div>
 
-			<div class="col-md-4">
+			<div class="col-md-3">
 					<label for="pais">Pais</label>
-					<select class="form-control" id="pais">
+					<select class="form-control" id="pais" formControlName="pais" required>
 							<option selected="true" disabled="disabled">Pais</option>  
 							<option *ngFor="let pais of paisos" value="{{pais.codi}}">
 
@@ -37,49 +42,41 @@
 				</div>
 			
 
-			<div class="col-md-4">
+			<div class="col-md-3">
 					<label for="comunitat">Comunitat Autònoma</label>
-					<select class="form-control" id="comunitat" >
+					<select class="form-control" id="comunitat" formControlName="comunitat" required>
 							
 							
 						
 					</select>
 				</div>
-		<div class="col-md-4">
+		<div class="col-md-3">
 			<label for="ciutat">Ciutat</label>
-			<select class="form-control" id="ciutat">
+			<select class="form-control" formControlName="ciutat" id="ciutat" required>
 					 
 					
 				
 			</select>
 		</div>
 	</div>
-		
-		<br>
-
-	<h3>Dades de l'usuari</h3>
 
 
 <div class="form-group row">
 
-<div class="col-md-4">
-		<label for="exampleInputEmail1">Email address</label>
-		<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+<div class="col-md-6">
+		<label for="email">Email</label>
+		<input type="email" class="form-control" id="email" formControlName="email" placeholder="Enter email" required>
 	  </div>
-	  <div class="col-md-4">
-		<label for="exampleInputPassword1">Password</label>
-		<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-	  </div>
-	  <div class="col-md-4">
-		<label for="exampleInputPassword1">Password</label>
-		<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+	  <div class="col-md-6">
+		<label for="dni">DNI</label>
+		<input type="text" class="form-control" id="dni" formControlName="dni" placeholder="DNI" required>
 	  </div>
 </div>
 
 <br>
 <button type="submit" class="btn btn-primary">Enviar</button>
 
-
+</form>
 
 
 </div>

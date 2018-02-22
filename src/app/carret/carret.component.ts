@@ -118,8 +118,8 @@ buidarCarret(){
    // localStorage.removeItem('entrada2');
       this.imprimir();
 
-      this.llistarCarrito();
-      this.getCarrito();
+      //this.llistarCarrito();
+      //this.getCarrito();
       this.descripcionModelo();
 
    
