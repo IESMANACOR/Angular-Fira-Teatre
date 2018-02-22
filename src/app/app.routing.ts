@@ -19,6 +19,6 @@ const APP_ROUTES: Routes=[
 {path:'calendari',component:Calendari2Component},
 {path:'formulari/faq',component:FaqComponent},
 {path: '', component: HomeComponent },
-{path:'espectacles/detallEspectacle/:id',component:DetallEspectacleComponent}
+{path:'espectacles/detallEspectacle/:id',component:DetallEspectacleComponent},
 ];
 export const routing=RouterModule.forRoot(APP_ROUTES);

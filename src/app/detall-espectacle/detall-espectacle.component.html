@@ -5,20 +5,20 @@
   </div>
   <!--
     -->
-  <div *ngFor='let espectacle of detallEspectacle.detalls' class="col-4 d-inline-block align-top">
+  <div *ngFor='let espectacle of detallEspectacle.detalls; ' class="col-4 d-inline-block align-top">
     <br>
     <p class="textEspectacle d-inline-block">Títol : </p>
     <p class="d-inline-block"> {{espectacle.titol}}</p><br>
     <p class="textEspectacle d-inline-block">Gènere : </p>
-    <p class="d-inline-block"> {{espectacle.nomGenere}}</p><br>
+    <p class="d-inline-block" *ngFor='let genere of detallEspectacle.genere'> {{genere.nomGenere}}</p><br>
     <p class="textEspectacle d-inline-block">Tipus d'espectacle : </p>
-    <p class="d-inline-block"> {{espectacle.nomTipus}}</p><br>
+    <p class="d-inline-block" *ngFor='let tipus of detallEspectacle.tipus'> {{tipus.nomTipus}}</p><br>
     <p class="textEspectacle d-inline-block">Edat Recomanada : </p>
     <p class="d-inline-block"> {{espectacle.edatRecomanada}}</p><br>
     <p class="textEspectacle d-inline-block">Duració : </p>
     <p class="d-inline-block"> {{espectacle.duracio}} min</p><br>
     <p class="textEspectacle d-inline-block">Companyía :</p>
-    <p class="d-inline-block"> {{espectacle.nomCompanyia}}</p><br>
+    <p class="d-inline-block" *ngFor='let companyia of detallEspectacle.companyia'> {{companyia.nomCompanyia}}</p><br>
     <p class="textEspectacle d-inline-block">Preu :</p>
     <p class="d-inline-block"> {{espectacle.preu}} €</p><br>
 
@@ -43,9 +43,10 @@
     <div class="col-1 d-inline-block"></div>
     <div class="col-5 d-inline-block">
       <p class="font-weight-bold d-inline-block">Pròximes sessions : </p>
-      <p id="clicka" class="sessionsPassades d-inline-block">(fes click aqui per veure les sessions passades)</p><br><br>
-      <p *ngFor='let sessio of detallEspectacle.sessio'> Data : {{sessio.dataBona}} Hora : {{sessio.hora}} Seients Disponibles : {{sessio.seientsDisponibles}} Preu de la Sessio : {{sessio.preu}} </p>
-      <div id="obri">
+      <p id="clicka" class="sessionsPassades d-inline-block">(fes click aqui per veure les sessions passades)</p><br>
+      <p *ngFor='let sessio of detallEspectacle.sessio'> Data : {{sessio.dataBona}} Hora : {{sessio.hora}} Seients Disponibles : {{sessio.seientsDisponibles}} </p>
+      <br><div id="obri">
+        <h2>Sessions Anteriors :</h2>
         <p *ngFor='let sessio of detallEspectacle.sessionsPassades'>Data : {{sessio.dataBona}} Hora : {{sessio.hora}}</p>
       </div>
     </div>
