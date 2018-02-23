@@ -32,8 +32,8 @@
     <p class="pl-2" *ngFor='let espectacle of detallEspectacle.director'> {{espectacle.nom}} {{espectacle.llinatge1}} {{espectacle.llinatge2}}</p>
 
     <p class="font-weight-bold">Actors : </p>
-    <ul>
-      <li *ngFor='let espectacle of detallEspectacle.actor'>{{espectacle.nom}} {{espectacle.llinatge1}} {{espectacle.llinatge2}}</li>
+    <ul class="actors">
+      <li class="actors" *ngFor='let espectacle of detallEspectacle.actor'>{{espectacle.nom}} {{espectacle.llinatge1}} {{espectacle.llinatge2}}</li>
     </ul>
   </div>
   <div class="d-inline-block col-12">
@@ -42,18 +42,21 @@
   <div class="col-12 border">
     <div class="col-1 d-inline-block"></div>
     <div class="col-5 d-inline-block">
-      <p class="font-weight-bold d-inline-block">Pròximes sessions : </p>
+      <h2 class="font-weight-bold d-inline-block">Selecciona la teva sessio : </h2>
       <p id="clicka" class="sessionsPassades d-inline-block">(fes click aqui per veure les sessions passades)</p><br>
-      <p *ngFor='let sessio of detallEspectacle.sessio'> Data : {{sessio.dataBona}} Hora : {{sessio.hora}} Seients Disponibles : {{sessio.seientsDisponibles}} </p>
+        <ul>
+          <li class="capcelera" *ngFor='let salasessio of detallEspectacle.salasessio'>Sala : {{salasessio.nom}} </li>
+          <li class="hores" *ngFor='let sessio of detallEspectacle.sessio'><a (click)=postProfile(sessio)
+             class="text-dark" href="">Dia : {{sessio.dataBona}} a les : {{sessio.horaBona}}</a></li>
+        </ul>
       <br><div id="obri">
         <h2>Sessions Anteriors :</h2>
-        <p *ngFor='let sessio of detallEspectacle.sessionsPassades'>Data : {{sessio.dataBona}} Hora : {{sessio.hora}}</p>
+        <p *ngFor='let sessio of detallEspectacle.sessionsPassades'>Data : {{sessio.dataBona}}  |  Hora : {{sessio.hora}}</p>
       </div>
     </div>
     <!--
         -->
     <div class="col-5 d-inline-block">
-      <a href=""><button type="button" class="btn-lg btn btn-primary float-right" name="button">Comprar</button></a>
     </div>
     <div class="col-1 d-inline-block"></div>
   </div>
