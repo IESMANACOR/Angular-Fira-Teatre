@@ -47,15 +47,13 @@ export class DetallEspectacleComponent implements OnInit {
 
   postProfile(sessio){
 
-//console.log(this.sessio.value.espectacle);
-//localStorage.clear();
-//localStorage.removeItem('entrada1');
+
 let myObj = { espectacle: sessio.codiEspectacle, sessio: sessio.codi };
 let stl=localStorage.length;
 localStorage.setItem("entrada"+stl, JSON.stringify(myObj));
 
 //this.imprimir();
-this.router.navigate(['carret']);
+//this.router.navigate(['carret']);
     }
 
 

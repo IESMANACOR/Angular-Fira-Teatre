@@ -8,12 +8,16 @@ import { CarretComponent } from './carret/carret.component';
 import { Calendari2Component } from './calendari2/calendari2.component';
 import { FaqComponent } from './faq/faq.component';
 import {DetallEspectacleComponent} from './detall-espectacle/detall-espectacle.component'
+import { ResumComponent } from './resum/resum.component';
+
+
 
 const APP_ROUTES: Routes=[
 {path:'espectacles',component:EspectaclesComponent},
 {path:'carret/registre',component:RegistreComponent},
+{path:'carret/registre/resum',component:ResumComponent},
 {path:'formulari',component:FormulariComponent},
-{path:'comprar',component:ComprarComponent},
+// {path:'comprar',component:ComprarComponent},
 {path:'inici',component:HomeComponent},
 {path:'carret',component:CarretComponent},
 {path:'calendari',component:Calendari2Component},

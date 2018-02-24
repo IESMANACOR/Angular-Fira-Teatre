@@ -28,14 +28,6 @@ console.log("Hi ha una errada a la cridada HTTP", error);
 return Promise.reject(error.message || error);
 }
 
-/*informacioEmpleat(id:number){
-    return this.http.get(`https://jsonplaceholder.typicode.com/users/${id}`)
-    .toPromise()
-    .then(resposta => resposta.json())
-    .catch(this.errada)
-    }
-
-    */
 }
 
 //generes https://api.myjson.com/bins/n82d5

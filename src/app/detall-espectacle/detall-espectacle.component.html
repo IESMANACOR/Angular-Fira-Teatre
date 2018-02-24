@@ -46,8 +46,8 @@
       <p id="clicka" class="sessionsPassades d-inline-block">(fes click aqui per veure les sessions passades)</p><br>
         <ul>
           <li class="capcelera" *ngFor='let salasessio of detallEspectacle.salasessio'>Sala : {{salasessio.nom}} </li>
-          <li class="hores" *ngFor='let sessio of detallEspectacle.sessio'><a (click)=postProfile(sessio)
-             class="text-dark" href="">Dia : {{sessio.dataBona}} a les : {{sessio.horaBona}}</a></li>
+          <li class="hores" *ngFor='let sessio of detallEspectacle.sessio'><a (click)="postProfile(sessio)" href="http://www.f.dawman.info/#/carret"
+             class="text-dark">Dia : {{sessio.dataBona}} a les : {{sessio.horaBona}}</a></li>
         </ul>
       <br><div id="obri">
         <h2>Sessions Anteriors :</h2>

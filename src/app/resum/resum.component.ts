@@ -1,49 +1,19 @@
 import { Component, OnInit } from '@angular/core';
-import { CarretService } from './carret.service';
 import { Http } from '@angular/http'
-import 'rxjs/add/operator/toPromise'
-import { HttpClient} from '@angular/common/http';
-declare var jquery: any;
-declare var $: any;
+
 
 @Component({
-  selector: 'app-carret',
-  templateUrl: './carret.component.html',
-  styleUrls: ['./carret.component.css']
+  selector: 'app-resum',
+  templateUrl: './resum.component.html',
+  styleUrls: ['./resum.component.css']
 })
-export class CarretComponent implements OnInit {
+export class ResumComponent implements OnInit {
 
-  constructor(private service: CarretService,private http: Http, private httpC: HttpClient) { }
+  constructor(private http: Http) { }
 
- carrito=[];
+  carrito=[];
 
   preu:number=0;
-
-
-  llistarCoses() {
-    return this.http.get('http://www.f.dawman.info/rest/public/cart/index')
-        .toPromise()
-        .then(resposta => resposta.json())
-        .catch(this.errada)
-}
-
-llistarCarrito() {
-
-  this.llistarCoses()
-    .then(result =>  console.log(result))
-    .catch(error => console.log(error));
-
-}
-
-getCarrito(){
-  this.httpC.get(`http://www.f.dawman.info/rest/public/cart`)
-  .subscribe(
-  (data:any[])=>{console.log(data)});
-  }
-
-
-
-
 
   imprimir(){
     for (let i = 0; i < localStorage.length; i++){
@@ -89,7 +59,6 @@ contarPreu(espectacle, sessio) {
     .then(result =>  this.preu+=result[0].preu)
     .catch(error => console.log(error));
 
-
 }
 
 private errada(error: any) {
@@ -97,21 +66,11 @@ private errada(error: any) {
   return Promise.reject(error.message || error);
 }
 
-buidarCarret(){
-  localStorage.clear();
-  window.location.reload();
-}
-
-
-
   ngOnInit() {
-      this.imprimir();
 
-      //this.llistarCarrito();
-      //this.getCarrito();
-      
-
-   
+    this.imprimir();
+    console.log(this.carrito);
+    localStorage.clear();
   }
 
 }

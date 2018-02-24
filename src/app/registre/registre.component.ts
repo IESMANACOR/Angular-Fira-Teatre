@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { RegistreService } from './registre.service';
 import { NgForm,FormControl,FormGroup,Validators } from '@angular/forms';
+import { RouterModule, Router, ActivatedRoute } from '@angular/router';
+
 
 
 declare var jquery:any;
@@ -16,7 +18,7 @@ export class RegistreComponent implements OnInit {
   formulari:FormGroup;
 
 
-  constructor(private service: RegistreService) { 
+  constructor(private service: RegistreService,private router: Router) { 
     this.formulari=new FormGroup({
       nom:new FormControl("",[Validators.required]),
       llinatge1:new FormControl("",[Validators.required]),
@@ -34,23 +36,40 @@ export class RegistreComponent implements OnInit {
   paisos;
 
   enviarFormulari(){
-    console.log(JSON.stringify(this.formulari.value));
+    //console.log(JSON.stringify(this.formulari.value));
 
-    this.service.altaUsuari();
-    console.log("enviat");
+    this.service.altaUsuari(this.formulari.value);
+    this.imprimir();
+    //console.log("enviat");
+    //localStorage.clear();
+    
+    this.router.navigate(['carret/registre/resum']);
+
+  }
+
+  entrades=[];
+
+  imprimir(){
+    for (let i = 0; i < localStorage.length; i++){
+      let key = localStorage.key(i);
+
+      if(key=="entrada"+i){
+      let value = JSON.parse(localStorage.getItem(key));
+      let myObj = { espectacle: value.espectacle, sessio: value.sessio }
+
+        this.entrades.push(myObj);
+
+      }
+    }
+
+    this.service.altaCompra(this.entrades);
+
+    //console.log(this.entrades);
   }
 
 
 
-  llistaCiutats() {
 
-    this.service
-      .llistaCiutat()
-      .then(result => this.ciutats = result)
-      .catch(error => console.log(error));
-
-
-  }
 
   llistaPais() {
 
@@ -64,8 +83,12 @@ export class RegistreComponent implements OnInit {
 
   ngOnInit() {
 
-    this.llistaCiutats();
+    
     this.llistaPais();
+
+    
+
+   // this.service.altaUsuari();
 
     $(document).ready(function () {
 

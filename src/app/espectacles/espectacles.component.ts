@@ -15,8 +15,6 @@ export class EspectaclesComponent implements OnInit {
 
 	constructor(private service: EspectacleService) {
 
-		
-
 		$(document).ready(function () {
 
 			$(document).on("mouseenter", ".foto", function() {
@@ -156,8 +154,8 @@ export class EspectaclesComponent implements OnInit {
 							if (espectacle[field[0].codi] !== true) {
 
 								espectacle[field[0].codi] = true;
-								$(".aqui").append("<div class='d-inline-block col-12 col-sm-6 col-md-3 align-top pt-2 f-obra'><div class='col-12 col-md-12'><div class='with-100' style='height: 300px;'><img style='height: 100%; width: 100%' src='/assets/imatges/" + field[0].codi + "/" + field[0].foto + "' alt='foto'></div><div class='col-12 col-md-12'><p class='text-center'>" + field[1].titol + "</p></div></div></div></div>");
 
+								$(".aqui").append("<div class='d-inline-block col-12 col-sm-6 col-md-3 align-top pt-2 f-obra'><div class='col-12 col-md-12 div1 foto'><div class='with-100 imatge' style='height: 300px;'><img style='height: 100%; width: 100%' src='/assets/imatges/" + field[0].codi + "/" + field[0].foto + "' alt='foto'></div><div style='position:absolute;left:0px;top:258px' class='col-12 col-md-12 pt-1 botons d-none'><a href='http://www.f.dawman.info/#/espectacles/detallEspectacle/"+ field[0].codi+"'>	<button class='btn btn-primary btn-block'>Veure Fitxa</button></a></div><div class='col-12 col-md-12 titol-o'><p class='text-center'> " + field[1].titol + "</p></div></div></div>");
 							}
 
 						});
@@ -190,8 +188,7 @@ export class EspectaclesComponent implements OnInit {
 						//alert(field.nom);
 
 
-						$(".aqui").append("<div class='d-inline-block col-12 col-sm-6 col-md-3 align-top pt-2 f-obra'><div class='col-12 col-md-12'><div class='with-100' style='height: 300px;'><img style='height: 100%; width: 100%' src='/assets/imatges/" + field[0].codi + "/" + field[0].foto + "' alt='foto'></div><div class='col-12 col-md-12'><p class='text-center'>" + field[1].titol + "</p></div></div></div></div>");
-						$(".aqui")
+						$(".aqui").append("<div class='d-inline-block col-12 col-sm-6 col-md-3 align-top pt-2 f-obra'><div class='col-12 col-md-12 div1 foto'><div class='with-100 imatge' style='height: 300px;'><img style='height: 100%; width: 100%' src='/assets/imatges/" + field[0].codi + "/" + field[0].foto + "' alt='foto'></div><div style='position:absolute;left:0px;top:258px' class='col-12 col-md-12 pt-1 botons d-none'><a href='http://www.f.dawman.info/#/espectacles/detallEspectacle/"+ field[0].codi+"'>	<button class='btn btn-primary btn-block'>Veure Fitxa</button></a></div><div class='col-12 col-md-12 titol-o'><p class='text-center'> " + field[1].titol + "</p></div></div></div>");
 
 
 					});
@@ -218,9 +215,8 @@ export class EspectaclesComponent implements OnInit {
 				$.getJSON("http://www.f.dawman.info/rest/public/espectacles/" + idioma + "/" + edat, function (result) {
 					$.each(result, function (i, field) {
 
-
-						$(".aqui").append("<div class='d-inline-block col-12 col-sm-6 col-md-3 align-top pt-2 f-obra'><div class='col-12 col-md-12'><div class='with-100' style='height: 300px;'><img style='height: 100%; width: 100%' src='/assets/imatges/" + field.codi + "/" + field.foto + "' alt='foto'></div><div class='col-12 col-md-12'><p class='text-center'>" + field.titol + "</p></div></div></div></div>");
-
+					
+						$(".aqui").append("<div class='d-inline-block col-12 col-sm-6 col-md-3 align-top pt-2 f-obra'><div class='col-12 col-md-12 div1 foto'><div class='with-100 imatge' style='height: 300px;'><img style='height: 100%; width: 100%' src='/assets/imatges/" + field.codi + "/" + field.foto + "' alt='foto'></div><div style='position:absolute;left:0px;top:258px' class='col-12 col-md-12 pt-1 botons d-none'><a href='http://www.f.dawman.info/#/espectacles/detallEspectacle/"+ field.codi+"'>	<button class='btn btn-primary btn-block'>Veure Fitxa</button></a></div><div class='col-12 col-md-12 titol-o'><p class='text-center'> " + field.titol + "</p></div></div></div>");
 					});
 				});
 
@@ -252,6 +248,8 @@ export class EspectaclesComponent implements OnInit {
 
 			
 		});
+
+		
 	 }
 
 
