@@ -62,6 +62,10 @@ export class RegistreComponent implements OnInit {
       }
     }
 
+    let obj = {dni: this.formulari.value.dni, correu: this.formulari.value.email}
+
+    this.entrades.push(obj);
+
     this.service.altaCompra(this.entrades);
 
     //console.log(this.entrades);

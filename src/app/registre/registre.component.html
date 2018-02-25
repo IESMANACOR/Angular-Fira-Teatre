@@ -1,82 +1,94 @@
-
-<div class="container">
-
-	<h1 class="text-center">Dades personals</h1>
-	<br>
-
-	<form [formGroup]="formulari" (ngSubmit)="enviarFormulari()">
-	<div class="form-group row">
-		<div class="col-md-4">
-			<label for="nom">Nom</label>
-			<input type="text" class="form-control" id="nom"  formControlName="nom" placeholder="Nom" required>
+<div class="w-100">
+	<div class="container pt-3">
+	
+		<h1 class="text-center"><i class="fas fa-address-card"></i> Dades personals</h1>
+		<br>
+	
+		<form [formGroup]="formulari" (ngSubmit)="enviarFormulari()">
+		<div class="form-group row pt-2">
+			<div class="col-md-4">
+				<label for="nom">Nom*</label>
+				<input type="text" class="form-control" id="nom"  formControlName="nom" placeholder="Nom" >
+				 
+			</div>
+			<div class="col-md-4">
+				<label for="llinatge1">Llinatge 1*</label>
+				<input type="text" class="form-control" id="llinatge1" formControlName="llinatge1" placeholder="Primer llinatge" required>
+			</div>
+			<div class="col-md-4">
+				<label for="llinatge2">Llinatge 2*</label>
+				<input type="text" class="form-control" id="llinatge2" formControlName="llinatge2" placeholder="Segon Llinatge" required>
+			</div>
 		</div>
-		<div class="col-md-4">
-			<label for="llinatge1">Llinatge 1</label>
-			<input type="text" class="form-control" id="llinatge1" formControlName="llinatge1" placeholder="Primer llinatge" required>
-		</div>
-		<div class="col-md-4">
-			<label for="llinatge2">Llinatge 2</label>
-			<input type="text" class="form-control" id="llinatge2" formControlName="llinatge2" placeholder="Segon Llinatge" required>
-		</div>
-	</div>
-
-	<div class="form-group row">
-			<div class="col-md-3">
-					<label for="adreça">Adreça</label>
-					<input type="text" class="form-control" id="adreça" formControlName="adreça" placeholder="Adreça" required>
-				  </div>
-
-			<div class="col-md-3">
-					<label for="pais">Pais</label>
-					<select class="form-control" id="pais" formControlName="pais" required>
-							<option selected="true" disabled="disabled">Pais</option>  
-							<option *ngFor="let pais of paisos" value="{{pais.codi}}">
-
-									{{pais.nom}}
-		
-		
-		
-		
-								</option>
-					</select>
-				</div>
+	
+		<div class="form-group row pt-2">
+				<div class="col-md-3">
+						<label for="adreça">Adreça*</label>
+						<input type="text" class="form-control" id="adreça" formControlName="adreça" placeholder="Adreça" required>
+					  </div>
+	
+				<div class="col-md-3">
+						<label for="pais">Pais*</label>
+						<select class="form-control" id="pais" formControlName="pais" required>
+								<option selected="true" disabled="disabled">Pais</option>  
+								<option *ngFor="let pais of paisos" value="{{pais.codi}}">
+	
+										{{pais.nom}}
 			
-
-			<div class="col-md-3">
-					<label for="comunitat">Comunitat Autònoma</label>
-					<select class="form-control" id="comunitat" formControlName="comunitat" required>
-							
-							
-						
-					</select>
-				</div>
-		<div class="col-md-3">
-			<label for="ciutat">Ciutat</label>
-			<select class="form-control" formControlName="ciutat" id="ciutat" required>
-					 
-					
+			
+			
+			
+									</option>
+						</select>
+					</div>
 				
-			</select>
+	
+				<div class="col-md-3">
+						<label for="comunitat">Comunitat Autònoma*</label>
+						<select class="form-control" id="comunitat" formControlName="comunitat" required>
+								
+								
+							
+						</select>
+					</div>
+			<div class="col-md-3">
+				<label for="ciutat">Ciutat*</label>
+				<select class="form-control" formControlName="ciutat" id="ciutat" required>
+						 
+						
+					
+				</select>
+			</div>
 		</div>
+	
+	
+	<div class="form-group row pt-2">
+	
+	<div class="col-md-6">
+			<label for="email">Email*</label>
+			<input type="email" class="form-control" id="email" formControlName="email" placeholder="Enter email" required>
+		  </div>
+		  <div class="col-md-6">
+			<label for="dni">DNI*</label>
+			<input type="text" class="form-control" id="dni" formControlName="dni" placeholder="DNI" required>
+		  </div>
 	</div>
-
-
-<div class="form-group row">
-
-<div class="col-md-6">
-		<label for="email">Email</label>
-		<input type="email" class="form-control" id="email" formControlName="email" placeholder="Enter email" required>
-	  </div>
-	  <div class="col-md-6">
-		<label for="dni">DNI</label>
-		<input type="text" class="form-control" id="dni" formControlName="dni" placeholder="DNI" required>
-	  </div>
-</div>
-
-<br>
-<button type="submit" class="btn btn-primary">Confirmar pagament</button>
-
-</form>
-
-
-</div>
+	
+	<br>
+	<div *ngIf="!formulari.valid">
+		<p class="text-danger">*Ompl tots els camps per poder realitzar la compra</p>
+		</div>
+	<div class="w-100 pt-2 pb-2">
+	
+		 <!-- <button type="submit" class="btn btn-primary" id="boto-sub">Confirmar pagament</button>  -->
+	<button type="submit" class="btn btn-primary" id="boto-sub" [disabled]="!formulari.valid">Confirmar pagament</button>
+	
+	</div>
+	
+	
+	
+	</form>
+	
+	
+	</div>
+	</div>
