@@ -1,0 +1,18 @@
+
+.body {
+    background-image: url("http://www.gsfdcy.com/data/img/88/2177142-theater-wallpaper.jpg") !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1{
+    font-family: 'Raleway';
+}
+.quisom{
+    background-color: rgba(255, 255, 255, 0.795);
+}
+.historia{
+    background-color: rgba(255, 255, 255, 0.795);
+}

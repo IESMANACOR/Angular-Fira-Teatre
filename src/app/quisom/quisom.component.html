@@ -1,0 +1,67 @@
+<div class="body ">
+  <div class="historia pt-5">
+      <div class="container">
+          <h1 class="">Historia</h1>
+          <p class="ml-1">
+              La mayoría de los estudios consideran que los orígenes del teatro deben buscarse en la evolución de los rituales mágicos
+              relacionados con la caza, al igual que las pinturas rupestres, o la recolección agrícola que, tras la introducción
+              de la música y la danza, se embocaron en auténticas ceremonias dramáticas donde se rendía culto a los dioses
+              y se expresaban los principios espirituales de la comunidad. Este carácter de manifestación sagrada resulta
+              un factor común a la aparición del teatro en todas las civilizaciones.
+          </p>
+          <p class="ml-1">
+              Tras siglos de misterioso olvido, acaso por las prohibiciones durante la inquisición, la recuperación del teatro en Occidente
+              tuvo principal apoyo en el clero, que lo empleó con fines religiosos. Así, desde el siglo XI, fue habitual
+              la representación en las iglesias de misterios y moralidades, cuyo objeto era presentar de forma sencilla
+              la doctrina cristiana a los fieles. A fin de facilitar la comprensión, el latín cedió paso paulatinamente
+              a las lenguas vernáculas, y en los siglos XIII y XIV, tanto las piezas religiosas como las florecientes farsas
+              profanas comenzaron a representarse.
+          </p>
+          <p class="ml-1 mb-0">
+              La eclosión del Renacimiento en Italia tuvo consecuencias decisivas sobre la evolución del teatro, pues, al surgir una producción
+              dramática de carácter culto, inspirada en los modelos clásicos y destinada a las clases aristocráticas, se
+              generalizó en el transcurso del siglo XVI la construcción de salas cubiertas y dotadas de mayores comodidades.
+          </p>
+      </div>
+  </div>
+
+
+  <div class="quisom pt-4">
+      <div class="container ">
+          <h1 class=" ">Quí Som?</h1>
+          <p class="ml-1 ">
+              La mayoría de los estudios consideran que los orígenes del teatro deben buscarse en la evolución de los rituales mágicos
+              relacionados con la caza, al igual que las pinturas rupestres, o la recolección agrícola que, tras la introducción
+              de la música y la danza, se embocaron en auténticas ceremonias dramáticas donde se rendía culto a los dioses
+              y se expresaban los principios espirituales de la comunidad. Este carácter de manifestación sagrada resulta
+              un factor común a la aparición del teatro en todas las civilizaciones.
+          </p>
+          <p class="ml-1 mb-0">
+              La eclosión del Renacimiento en Italia tuvo consecuencias decisivas sobre la evolución del teatro, pues, al surgir una producción
+              dramática de carácter culto, inspirada en los modelos clásicos y destinada a las clases aristocráticas, se
+              generalizó en el transcurso del siglo XVI la construcción de salas cubiertas y dotadas de mayores comodidades.
+          </p>
+      </div>
+  </div>
+
+  <div class="sala quisom pt-4">
+      <div class="container">
+          <h1>Sales:</h1>
+          <div *ngFor="let noms of sala">
+              <h2 class="ml-1">-{{ noms.nom }} </h2>
+              <div class="ml-3">
+                  <p style="font-size: 24px;">{{ noms.adreca }}</p>
+                  
+                  <p class="">
+                      <i class="fas fa-users mr-1"></i> Aforament: {{ noms.aforament }}</p>
+                  <p class="">
+                      <i class="fas fa-phone mr-1"></i> Telefono: {{ noms.telefon }}</p>
+                  <p class="mb-0 pb-5">Descripcio: {{ noms.descripcio }}</p>
+                  
+              </div>
+          </div>
+      </div>
+
+
+  </div>
+</div>
