@@ -53,7 +53,7 @@ let stl=localStorage.length;
 localStorage.setItem("entrada"+stl, JSON.stringify(myObj));
 
 
-
+//
 //this.imprimir();
 //this.router.navigate(['carret']);
     }

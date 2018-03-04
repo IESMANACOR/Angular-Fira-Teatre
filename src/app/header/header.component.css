@@ -33,8 +33,12 @@ font-weight: bold;
 }
 
 .active{
-font-weight: bold;
-color:rgb(220, 238, 59)  !important;
+  border-bottom: rgb(218, 175, 58) 3px solid;
+
+}
+.active-c{
+  color: rgb(218, 175, 58);
+
 }
 .navElement:active{
 color:rgb(220, 238, 59)  !important;
@@ -69,22 +73,13 @@ transition: opacity 1s ease;
 
 }
 
-.fade {
-opacity: 1;
 
-}
-.fade1 {
-  opacity: 0;
-
-}
 .logo{
 
-
-background-color: #d6a92e00;
-  opacity: 1;
-  height: 160px;
+  background-color: #d6a92e00;
+  opacity: 1; 
+  height: 50px; 
   float: left;
-  line-height: 80px;
 
 
 }
@@ -93,14 +88,26 @@ background-color: #d6a92e00;
   z-index: 9002;
 }
 .scrolled {
-
-background-color: rgb(0, 0, 0) !important;
-position: fixed;
-top:0;
-left:0;
-width: 100%;
-border-bottom: rgb(238, 190, 59) 3px solid;
-z-index: 101;
+  
+  background-color: rgba(0, 0, 0, 0.781) ;
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100%;
+  border-bottom: rgb(238, 190, 59) 3px solid;
+  z-index: 101;
+  
+}
+@media (max-width: 600px) {
+  .scrolled {
+    background-color: rgb(77, 77, 77) ;
+  }
+ 
+  #primerUl{
+    padding: 0px;
+    margin: 0px;
+    margin:auto !important;
+  }
 }
 
 ul{
@@ -130,3 +137,4 @@ list-style-type: none;
     color: white;
     text-align: center;
   }
+
