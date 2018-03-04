@@ -52,7 +52,7 @@ let myObj = { espectacle: sessio.codiEspectacle, sessio: sessio.codi };
 let stl=localStorage.length;
 localStorage.setItem("entrada"+stl, JSON.stringify(myObj));
 
-window.location.href="http://www.f.dawman.info/#/carret";
+
 
 //this.imprimir();
 //this.router.navigate(['carret']);
