@@ -28,12 +28,6 @@ llistaPais(){
 
 
     altaUsuari(user:any) {
-
-      //let producte = JSON.stringify(user);
-
-
-     // let headers = new HttpHeaders().set('Content-Type','application/json');
-
      
 
      return this.http.post('http://www.f.dawman.info/rest/public/persona/insertar', user)
@@ -43,11 +37,6 @@ llistaPais(){
   }
 
   altaCompra(producte:any) {
-
-   // let producte = JSON.stringify(llibre);
-
-
-   // let headers = new HttpHeaders().set('Content-Type','application/json');
 
    return this.http.post('http://www.f.dawman.info/rest/public/compra/insertar', producte)
    .subscribe(res => console.log(res));

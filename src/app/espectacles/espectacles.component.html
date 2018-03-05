@@ -9,7 +9,7 @@
 			</div><div 
 			class="col-md-6 col-4 d-none borrar-f" hidden>
 				<button class="btn btn-outline-danger float-right" id="borr-filtre">
-					<i class="far fa-times-circle"></i>Borrar</button>
+					<i class="far fa-times-circle"></i> Borrar</button>
 			</div>
 
 
@@ -28,14 +28,15 @@
 
 					<div id="formulari-tipus">
 
-						<form id="tipus-form">
+						<form id="tipus-form" class="pt-2 pl-4">
 
-							<div *ngFor="let type of tipus" class="col-12" style="padding-left:40px">
+							<div *ngFor="let type of tipus" class="col-12">
 
 
-								<label class="form-check-label">
-									<input type="radio" class="form-check-input" name="tipusRadio" id="tipusRadio" value="{{type.codi}}"> {{type.nom[1].nom}}
-								</label>
+								<label class="container">{{type.nom[1].nom}}
+									<input value="{{type.codi}}" type="radio" name="tipusRadio" id="tipusRadio">
+									<span class="checkmark"></span>
+								  </label>
 
 							</div>
 						</form>
@@ -54,13 +55,14 @@
 
 					<div id="formulari-genere">
 
-						<form id="genereForm">
+						<form id="genereForm" class="pt-2 pl-4">
 
-							<div *ngFor="let genere of generes" class="col-12" style="padding-left:40px">
+							<div *ngFor="let genere of generes" class="col-12">
 
-								<label class="form-check-label">
-									<input class="form-check-input" type="checkbox" name="genereCheck" value="{{genere.codi}}"> {{genere.nom[1].nom}}
-								</label>
+								<label class="cont">{{genere.nom[1].nom}}
+									<input type="checkbox" name="genereCheck" value="{{genere.codi}}">
+									<span class="checkmar"></span>
+								  </label>
 
 
 							</div>
@@ -78,38 +80,48 @@
 						</h5>
 					</div>
 
-					<div id="formulari-edat">
+					<div id="formulari-edat" class="pt-2 pl-4">
 
 						<form id="edatForm">
 
-							<div class="col-12" style="padding-left:40px">
-								<label class="form-check-label">
-									<input type="radio" class="form-check-input" name="edatRadio" id="genereRadio" value="Tots els publics"> Tots els publics
-								</label>
+							<div class="col-12">
+
+								<label class="container"> Tots els publics
+										<input type="radio" name="edatRadio" id="genereRadio" value="Tots els publics">
+										<span class="checkmark"></span>
+									  </label>
 
 							</div>
-							<div class="col-12" style="padding-left:40px">
-								<label class="form-check-label">
-									<input type="radio" class="form-check-input" name="edatRadio" id="genereRadio" value="Majors de 7 anys"> Majors de 7 anys
-								</label>
+							<div class="col-12">
+
+								<label class="container"> Majors de 7 anys
+										<input type="radio" name="edatRadio" id="genereRadio" value="Majors de 7 anys">
+										<span class="checkmark"></span>
+									  </label>
 
 							</div>
-							<div class="col-12" style="padding-left:40px">
-								<label class="form-check-label">
-									<input type="radio" class="form-check-input" name="edatRadio" id="genereRadio" value="Majors de 12 anys"> Majors de 12 anys
-								</label>
+							<div class="col-12">
+
+								<label class="container"> Majors de 12 anys
+										<input type="radio" name="edatRadio" id="genereRadio" value="Majors de 12 anys">
+										<span class="checkmark"></span>
+									  </label>
+								
 
 							</div>
-							<div class="col-12" style="padding-left:40px">
-								<label class="form-check-label">
-									<input type="radio" class="form-check-input" name="edatRadio" id="genereRadio" value="Majors de 16 anys"> Majors de 16 anys
-								</label>
+							<div class="col-12">
+								<label class="container"> Majors de 16 anys
+										<input type="radio" name="edatRadio" id="genereRadio" value="Majors de 16 anys">
+										<span class="checkmark"></span>
+									  </label>
 
 							</div>
-							<div class="col-12" style="padding-left:40px">
-								<label class="form-check-label">
-									<input type="radio" class="form-check-input" name="edatRadio" id="genereRadio" value="Majors de 18 anys"> Majors de 18 anys
-								</label>
+							<div class="col-12">
+
+								<label class="container"> Majors de 18 anys
+										<input type="radio" name="edatRadio" id="genereRadio" value="Majors de 18 anys">
+										<span class="checkmark"></span>
+									  </label>
 
 							</div>
 

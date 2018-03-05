@@ -13,7 +13,7 @@ declare var $: any;
 })
 export class CarretComponent implements OnInit {
 
-  constructor(private service: CarretService,private http: Http, private httpC: HttpClient) { }
+  constructor(private service: CarretService,private http: Http, private httpC: HttpClient) {  }
 
  carrito=[];
 
@@ -105,6 +105,7 @@ buidarCarret(){
 
 
   ngOnInit() {
+    
       this.imprimir();
 
       //this.llistarCarrito();

@@ -28,7 +28,7 @@ export class RegistreComponent implements OnInit {
       comunitat:new FormControl("",[Validators.required]),
       ciutat:new FormControl("",[Validators.required]),
       email:new FormControl("",[Validators.required]),
-      dni:new FormControl("",[Validators.required]),
+      dni:new FormControl("",[Validators.required,Validators.maxLength(9)]),
     });
    }
 
@@ -38,7 +38,8 @@ export class RegistreComponent implements OnInit {
   enviarFormulari(){
     //console.log(JSON.stringify(this.formulari.value));
 
-    this.service.altaUsuari(this.formulari.value);
+    //this.service.altaUsuari(this.formulari.value);
+    this.entrades.push(this.formulari.value);
     this.imprimir();
     //console.log("enviat");
     //localStorage.clear();
@@ -62,9 +63,9 @@ export class RegistreComponent implements OnInit {
       }
     }
 
-    let obj = {dni: this.formulari.value.dni, correu: this.formulari.value.email}
+    //let obj = {dni: this.formulari.value.dni, correu: this.formulari.value.email}
 
-    this.entrades.push(obj);
+    //this.entrades.push(obj);
 
     this.service.altaCompra(this.entrades);
 

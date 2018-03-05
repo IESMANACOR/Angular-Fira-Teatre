@@ -9,6 +9,7 @@ import { Calendari2Component } from './calendari2/calendari2.component';
 import { FaqComponent } from './faq/faq.component';
 import {DetallEspectacleComponent} from './detall-espectacle/detall-espectacle.component'
 import { ResumComponent } from './resum/resum.component';
+import { QuisomComponent } from './quisom/quisom.component';
 
 
 
@@ -18,6 +19,7 @@ const APP_ROUTES: Routes=[
 {path:'carret/registre/resum',component:ResumComponent},
 {path:'formulari',component:FormulariComponent},
 // {path:'comprar',component:ComprarComponent},
+{path: 'quisom', component: QuisomComponent },
 {path:'inici',component:HomeComponent},
 {path:'carret',component:CarretComponent},
 {path:'calendari',component:Calendari2Component},

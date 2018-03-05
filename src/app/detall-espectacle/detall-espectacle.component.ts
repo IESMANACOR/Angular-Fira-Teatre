@@ -29,8 +29,8 @@ export class DetallEspectacleComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log(this.id);
     this.id = +this.prova.snapshot.paramMap.get('id');
+    //console.log(this.id);
     this.llistaEspectacle(this.id);
 
     $(document).ready(function(){
@@ -52,6 +52,8 @@ let myObj = { espectacle: sessio.codiEspectacle, sessio: sessio.codi };
 let stl=localStorage.length;
 localStorage.setItem("entrada"+stl, JSON.stringify(myObj));
 
+
+//
 //this.imprimir();
 //this.router.navigate(['carret']);
     }

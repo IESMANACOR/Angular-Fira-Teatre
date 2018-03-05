@@ -13,7 +13,11 @@ export class HeaderComponent implements OnInit {
   constructor() { 
 
     $(document).ready(function(){
-  
+      if( $(window).width() < 500){
+        $(".navElement").css("font-size","16px");
+        $(".scrolled").css("background-color","black !important");
+        $("#redesSociales").hide();
+       } ;
       
        $(window).scroll(function(){
         
@@ -29,15 +33,18 @@ export class HeaderComponent implements OnInit {
           // Bind the window position to the progress dial
           $('.dial').val(scrollPercent).change();
           
-          if (s > 70 ) {
-             $('.headnav').addClass('scrolled fade');
+          if (s > 50 ) {
+             $('.headnav').addClass('scrolled ');
+             $('#logo').addClass('logo');
+             $('#nav1').hide();
              
          
          }
     
           if (s <= 19 ) {
-            $('.headnav').removeClass('scrolled fade');
-            
+            $('.headnav').removeClass('scrolled ');
+            $('#logo').removeClass('logo');
+            $('#nav1').show();
            
           }    
          

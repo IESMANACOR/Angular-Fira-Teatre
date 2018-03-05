@@ -35,6 +35,7 @@ import { FaqComponent } from './faq/faq.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { DetallEspectacleComponent } from './detall-espectacle/detall-espectacle.component';
 import { ResumComponent } from './resum/resum.component';
+import { QuisomComponent } from './quisom/quisom.component';
 
 const routes: Routes = [
 
@@ -58,7 +59,8 @@ const routes: Routes = [
     Calendari2Component,
     FaqComponent,
     DetallEspectacleComponent,
-    ResumComponent
+    ResumComponent,
+    QuisomComponent
   ],
   imports: [
     BrowserModule,
