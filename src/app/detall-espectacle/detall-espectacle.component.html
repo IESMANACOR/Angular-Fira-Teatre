@@ -1,12 +1,12 @@
 <main>
-  <div class="col-12">
-    <div class="col-1 d-inline-block"></div>
-    <div class="divCartell d-inline-block">
+  <div class="col-12 col-md-12">
+    <div class="col-0 col-md-1 d-inline-block"></div>
+    <div class="divCartell col-12 col-md-3 d-inline-block">
       <img src="assets/imatges/{{detallEspectacle?.detalls[0].codi}}/{{detallEspectacle?.detalls[0].foto}}" alt="" class="fotoCartell">
 
 
     </div>
-    <div *ngFor='let espectacle of detallEspectacle?.detalls; ' class="col-4 d-inline-block align-top">
+    <div *ngFor='let espectacle of detallEspectacle?.detalls; ' class="col-12 col-md-4 d-inline-block align-top">
       <br>
       <p class="textEspectacle d-inline-block">Títol : </p>
       <p class="d-inline-block"> {{espectacle.titol}}</p><br>
@@ -24,7 +24,7 @@
       <p class="d-inline-block"> {{espectacle.preu}} €</p><br>
 
     </div>
-    <div class="col-4 d-inline-block align-top">
+    <div class="col-12 col-md-4 d-inline-block align-top">
       <br>
       <p class="font-weight-bold">Sinòpsi :</p>
       <p class="pl-2" *ngFor='let espectacle of detallEspectacle?.detalls'> {{espectacle.sinopsi}}</p>
@@ -38,12 +38,12 @@
       </ul>
     </div>
   </div>
-  <div class="d-inline-block col-12">
+  <div class="d-inline-block col-12 col-md-12">
     <br>
   </div>
-  <div class="col-12 border">
-    <div class="col-1 d-inline-block"></div>
-    <div class="col-5 d-inline-block">
+  <div class="col-12 col-md-12 border">
+    <div class="col-0 col-md-1 d-inline-block"></div>
+    <div class="col-12 col-md-5 d-inline-block">
       <h2 class="font-weight-bold d-inline-block">Selecciona la teva sessio : </h2>
       <p id="clicka" class="sessionsPassades d-inline-block">(fes click aqui per veure les sessions passades)</p><br>
       <ul>
@@ -59,25 +59,25 @@
         <p *ngFor='let sessio of detallEspectacle?.sessionsPassades'>Data : {{sessio.dataBona}} | Hora : {{sessio.hora}}</p>
       </div>
     </div>
-    <div class="col-5 d-inline-block">
+    <div class="col-0 col-md-5 d-inline-block">
     </div>
-    <div class="col-1 d-inline-block"></div>
+    <div class="col-0 col-md-1 d-inline-block"></div>
   </div>
-  <div class="col-12">
-    <div class="col-1 d-inline-block"></div>
-    <div class="col-10 d-inline-block">
+  <div class="col-12 col-md-12">
+    <div class="col-0 col-md-1 d-inline-block"></div>
+    <div class="col-12 col-md-10 d-inline-block">
       <h2>Comentaris : </h2>
-      <div class="col-10 form-group">
-        <input class="col-6" placeholder="Inserti el seu correu..." type="text" /> <input type="checkbox" id="anonymous" value="anonymous"> Usuari anònim <br><br>
-
-        <textarea type="text" class="form-control col-sm-12" name="comentari" placeholder="Inserti el seu comentari..." rows="5"></textarea><br>
+      <div class="col-10 col-md-10 form-group">
+        <input class="col-12 col-md-6" id="inputAnonim" placeholder="Inserti el seu correu..." type="text" />
+        <input type="checkbox" name="anon" id="anonymous"> Usuari anònim <br><br>
+        <textarea type="text" class="form-control col-md-12 col-12" name="comentari" placeholder="Inserti el seu comentari..." rows="5"></textarea><br>
         <button class="btn btn-primary float-right">Enviar</button><br>
       </div>
       <div class="pl-3">
         <div class="w-100 pb-2">
           <h2> Comentaris :</h2>
         </div>
-        <div *ngFor='let comentari of detallEspectacle?.comentari'>
+        <div *ngFor='let comentari of detallEspectacle?.comentari' class="col-md-12 col-12">
           <p class="font-weight-bold d-inline-block"> {{comentari.nomUsuari}} ha dit :</p>
           <p class="d-inline-block"> {{comentari.contingut}}</p><br>
         </div>

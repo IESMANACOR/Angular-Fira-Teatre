@@ -3,8 +3,8 @@ import { DetallService } from './detall-espectacle.service';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
 
-declare var jquery : any;
-declare var $ : any;
+declare var jquery: any;
+declare var $: any;
 
 @Component({
   selector: 'app-detall-espectacle',
@@ -15,7 +15,7 @@ export class DetallEspectacleComponent implements OnInit {
 
   id: any;
 
-  constructor(private espectacle: DetallService, private prova: ActivatedRoute, private router:Router) { }
+  constructor(private espectacle: DetallService, private prova: ActivatedRoute, private router: Router) { }
 
   detallEspectacle;
 
@@ -33,7 +33,7 @@ export class DetallEspectacleComponent implements OnInit {
     //console.log(this.id);
     this.llistaEspectacle(this.id);
 
-    $(document).ready(function(){
+    $(document).ready(function() {
 
       $("#obri").hide();
 
@@ -42,21 +42,34 @@ export class DetallEspectacleComponent implements OnInit {
           // Animation complete.
         });
       });
+
+      $("#anonymous").change(function() {
+
+        if ($('#anonymous').prop('checked')) {
+          $("#inputAnonim").val("anonymous");
+          $("#inputAnonim").prop('disabled', true);
+        } else {
+          $("#inputAnonim").val("");
+          $("#inputAnonim").prop('disabled', false);
+
+        }
+      });
+
     });
   }
 
-  postProfile(sessio){
+  postProfile(sessio) {
 
 
-let myObj = { espectacle: sessio.codiEspectacle, sessio: sessio.codi };
-let stl=localStorage.length;
-localStorage.setItem("entrada"+stl, JSON.stringify(myObj));
+    let myObj = { espectacle: sessio.codiEspectacle, sessio: sessio.codi };
+    let stl = localStorage.length;
+    localStorage.setItem("entrada" + stl, JSON.stringify(myObj));
 
 
-//
-//this.imprimir();
-//this.router.navigate(['carret']);
-    }
+    //
+    //this.imprimir();
+    //this.router.navigate(['carret']);
+  }
 
 
 
