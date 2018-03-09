@@ -15,6 +15,7 @@ import { RegistreService } from './registre/registre.service';
 import { ComprarService } from './comprar/comprar.service';
 import { CarretService } from './carret/carret.service';
 import { DetallService } from './detall-espectacle/detall-espectacle.service';
+import { RegistreUsuariService } from './registre-usuari/registre-usuari.service'
 
 
 import { RegistreComponent } from './registre/registre.component';
@@ -36,6 +37,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { DetallEspectacleComponent } from './detall-espectacle/detall-espectacle.component';
 import { ResumComponent } from './resum/resum.component';
 import { QuisomComponent } from './quisom/quisom.component';
+import { RegistreUsuariComponent } from './registre-usuari/registre-usuari.component';
 
 const routes: Routes = [
 
@@ -60,7 +62,8 @@ const routes: Routes = [
     FaqComponent,
     DetallEspectacleComponent,
     ResumComponent,
-    QuisomComponent
+    QuisomComponent,
+    RegistreUsuariComponent
   ],
   imports: [
     BrowserModule,
@@ -75,7 +78,12 @@ const routes: Routes = [
    RouterModule.forRoot(routes, { useHash: true })
 
   ],
-  providers: [DetallService,EspectacleService, RegistreService,ComprarService,CarretService],
+  providers: [DetallService,
+    EspectacleService, 
+    RegistreService,
+    ComprarService,
+    CarretService,
+    RegistreUsuariService],
   bootstrap: [AppComponent],
 
 })

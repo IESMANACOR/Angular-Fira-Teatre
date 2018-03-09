@@ -1,0 +1,93 @@
+<div class="container mt-5 mb-5">
+
+
+
+  <div class="card">
+    <div class="card-body">
+      <h4 class="card-title mb-3">
+        <i class="fas fa-user-plus"></i> Registre</h4>
+      <form [formGroup]="formulari" (ngSubmit)="insertUsuari()">
+
+
+        <div class="form-group row">
+
+          <div class="col-12 col-md-4">
+            <label for="nom">Nom*</label>
+            <input class="form-control" formControlName="nom" type="text" id="nom" ng-model="nom">
+          </div>
+
+
+
+
+          <div class="col-12 col-md-4">
+            <label for="llinatge1">Primer llinatge*</label>
+            <input class="form-control" formControlName="llinatge1" type="text" id="llinatge1">
+          </div>
+
+
+
+
+          <div class="col-12 col-md-4">
+            <label for="llinatge2">Segon llinatge</label>
+            <input class="form-control" formControlName="llinatge2" type="text" id="llinatge2">
+          </div>
+
+        </div>
+
+
+        <div class="form-group row">
+          <label class="col-12 col-md-2 col-form-label">DNI*</label>
+          <div class="col-12 com-md-10">
+            <input class="form-control" formControlName="dni" type="text">
+          </div>
+        </div>
+
+        <div class="form-group row">
+          
+          <div class="col-12 col-md-6">
+              <label for="email">Correu electrònic*</label>
+            <input class="form-control" formControlName="email" type="email" id="email">
+          </div>
+        
+          
+          <div class="col-12 col-md-6">
+              <label for="contrasenya">Contrasenya*</label>
+            <input class="form-control" formControlName="password" type="password" id="contrasenya">
+          </div>
+        </div>
+
+
+        <div class="form-group row">
+          
+          <div class="col-12 col-md-6">
+              <label for="telefon">Telèfon</label>
+            <input class="form-control" formControlName="tel" type="number" id="telefon">
+          </div>
+        
+          
+          <div class="col-12 col-md-6">
+              <label for="adreça">Adreça*</label>
+            <input class="form-control" formControlName="adreça" type="text" id="adreça">
+          </div>
+        </div>
+
+
+
+        <div class="form-group row">
+          <label class="col-12 col-md-2 col-form-label">Ciutat*</label>
+          <div class="col-12 com-md-10">
+
+            <select class="form-control" formControlName="ciutat" name="">
+              <option *ngFor="let ciudad of ciudades" [value]="ciudad.codi">{{ciudad.nom}}</option>
+            </select>
+          </div>
+
+        </div>
+
+
+        <button type="submit" class="btn btn-primary" [disabled]="!formulari.valid">Registrar-se</button>
+
+      </form>
+    </div>
+  </div>
+</div>

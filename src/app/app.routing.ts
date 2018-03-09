@@ -10,6 +10,7 @@ import { FaqComponent } from './faq/faq.component';
 import {DetallEspectacleComponent} from './detall-espectacle/detall-espectacle.component'
 import { ResumComponent } from './resum/resum.component';
 import { QuisomComponent } from './quisom/quisom.component';
+import { RegistreUsuariComponent } from './registre-usuari/registre-usuari.component';
 
 
 
@@ -26,5 +27,6 @@ const APP_ROUTES: Routes=[
 {path:'formulari/faq',component:FaqComponent},
 {path: '', component: HomeComponent },
 {path:'espectacles/detallEspectacle/:id',component:DetallEspectacleComponent},
+{path: 'sign', component: RegistreUsuariComponent },
 ];
 export const routing=RouterModule.forRoot(APP_ROUTES);
