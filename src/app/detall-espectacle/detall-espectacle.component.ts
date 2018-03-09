@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DetallService } from './detall-espectacle.service';
 import { ActivatedRoute } from '@angular/router';
+import { NgForm, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 declare var jquery: any;
@@ -14,8 +15,16 @@ declare var $: any;
 export class DetallEspectacleComponent implements OnInit {
 
   id: any;
+  formulari: FormGroup;
 
-  constructor(private espectacle: DetallService, private prova: ActivatedRoute, private router: Router) { }
+  constructor(private espectacle: DetallService, private prova: ActivatedRoute, private router: Router) {
+    this.formulari = new FormGroup({
+      usuari: new FormControl("", [Validators.required]),
+      comentari: new FormControl("", [Validators.required]),
+      codiEspectacle: new FormControl("", [])
+    });
+
+  }
 
   detallEspectacle;
 
@@ -27,6 +36,17 @@ export class DetallEspectacleComponent implements OnInit {
 
 
   }
+
+
+  enviarFormulari() {
+    console.log(this.formulari);
+    this.espectacle.altaComentari(this.formulari);
+    window.location.reload();
+
+  }
+
+
+
 
   ngOnInit() {
     this.id = +this.prova.snapshot.paramMap.get('id');
@@ -47,12 +67,29 @@ export class DetallEspectacleComponent implements OnInit {
 
         if ($('#anonymous').prop('checked')) {
           $("#inputAnonim").val("anonymous");
-          $("#inputAnonim").prop('disabled', true);
+          $("#inputAnonim").prop('readonly', true);
         } else {
           $("#inputAnonim").val("");
-          $("#inputAnonim").prop('disabled', false);
+          $("#inputAnonim").prop('readonly', false);
 
         }
+      });
+
+
+      $('.ancla').click(function() {
+        var link = $(this);
+        var anchor = link.attr('href');
+        $('html, body').stop().animate({
+          scrollTop: jquery(anchor).offset().top
+        }, 2000);
+        return false;
+      });
+
+
+      $("#comentaris").hide();
+
+      $("#insert-comentaris").click( function() {
+        $("#comentaris").toggle();
       });
 
     });

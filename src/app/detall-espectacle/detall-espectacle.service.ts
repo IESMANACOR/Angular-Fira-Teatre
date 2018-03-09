@@ -16,5 +16,15 @@ export class DetallService {
     return Promise.reject(error.message || error);
   }
 
+  altaComentari(user:any) {
+
+
+   return this.http.post('http://www.f.dawman.info/rest/public/espectacle/comentar/', user)
+   .subscribe(res => console.log(res));
+
+
+}
+
+
 
 }

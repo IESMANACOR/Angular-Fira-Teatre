@@ -1,60 +1,76 @@
 .divCartell {
-    height: 520px;
-    width: 420px;
-  }
+  height: 520px;
+  width: 420px;
+}
 
-  .textEspectacle {
-    padding: 1%;
-    padding-left: 6%;
-    font-weight: bold;
-  }
+.titolEspectacle {
+  font-size: 45px;
+  text-decoration: underline;
+  text-decoration-color: #EEBE3B;
+}
 
-  .sessionsPassades {
-    font-size: 13px;
-  }
+.textEspectacle {
+  padding: 1%;
+  padding-left: 6%;
+}
 
-  img.fotoCartell {
-    height: 100%;
-    width: 100%;
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-top: 1%;
-    margin-bottom: 0%;
-  }
+.sessionsPassades {
+  font-size: 13px;
+}
 
-  ul.actors {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    -webkit-columns: 2;
-    -moz-columns: 2;
-    columns: 2;
-list-style-position: inside
-  }
+img.fotoCartell {
+  height: 100%;
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 1%;
+  margin-bottom: 0%;
+}
 
+ul.actors {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+  columns: 2;
+  list-style-position: inside
+}
 
-  li.actors:before {
-    content: "•";
-    padding-right: 8px;
-    color: #EEBE3B;
-  }
+li.actors:before {
+  content: "•";
+  padding-right: 8px;
+  color: #EEBE3B;
+}
 
-  li.capcelera{
-    width: 100%;
-    background-color: #EEBE3B;
-    list-style: none;
-    text-align:center;
-    font-weight: bold;
-    font-size: 20px;
-    padding: 1%;
-  }
-  li.hores{
-    list-style: none;
-    display: inline-block;
-    vertical-align: top;
-    background-color: white;
-    padding: 3%;
-  }
+li.capcelera {
+  width: 100%;
+  background-color: #EEBE3B;
+  list-style: none;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 1%;
+}
 
+li.hores {
+  list-style: none;
+  display: inline-block;
+  vertical-align: top;
+  background-color: white;
+  padding: 3%;
+}
 
-  main{padding-top: 5%}
+main {
+  padding-top: 5%;
+}
+
+.ancles {
+  list-style: none;
+  display: inline-block;
+
+}
+
+.llistaancles{
+padding-left: 5%
+}
