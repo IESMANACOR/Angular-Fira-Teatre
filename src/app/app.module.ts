@@ -16,6 +16,7 @@ import { ComprarService } from './comprar/comprar.service';
 import { CarretService } from './carret/carret.service';
 import { DetallService } from './detall-espectacle/detall-espectacle.service';
 import { RegistreUsuariService } from './registre-usuari/registre-usuari.service'
+import { FormulariService } from './formulari/formulari.service'
 
 
 import { RegistreComponent } from './registre/registre.component';
@@ -83,7 +84,8 @@ const routes: Routes = [
     RegistreService,
     ComprarService,
     CarretService,
-    RegistreUsuariService],
+    RegistreUsuariService,
+    FormulariService],
   bootstrap: [AppComponent],
 
 })
