@@ -1,30 +1,70 @@
 <section class="pt-4">
 
 
-    <div class="container">
+    <div class="container" style="min-height:700px">
 
         <h1>
             <i class="fas fa-check-circle text-success"></i> Compra finalitzada correctament</h1>
 
-        <h5>Els productes adqurits son els següents:</h5>
-
+        <div class="pt-3">
+            <h5>Els productes adqurits son els següents:</h5>
+        </div>
 
         <div class="col-12 col-md-12 jumbotron pt-4 pb-1">
+
+            <div class="col-12 col-md-12" style="border-bottom: solid 1px">
+                    <div class="col-3 col-md-3 d-inline-block">
+                            <h3>Espectacle</h3>
+
+                        </div><div class="col-3 col-md-3 d-inline-block">
+                            <h3>Data</h3>
+                        </div><div class="col-3 col-md-3 d-inline-block">
+                            <h3>Hora</h3>
+                        </div><div class="col-3 col-md-3 d-inline-block">
+                            <h3>Sala</h3>
+                        </div>
+            </div>
+
+            <div class="w-100 pt-4">
+
             <div *ngFor="let carret of carrito" class="col-md-12 col-12">
 
-                <p>1 X {{carret.titol}} el dia: {{carret.data}} a les: {{carret.hora}} a la sala: {{carret.nom}}</p>
+                
+
+                <div class="col-3 col-md-3 d-inline-block">
+
+                        <p>{{carret.titol}}</p>
+
+                </div><div class="col-3 col-md-3 d-inline-block">
+
+                        <p>{{carret.data}}</p> 
+
+                </div><div class="col-3 col-md-3 d-inline-block">
+
+                        <p>{{carret.hora}}</p>
+
+                </div><div class="col-3 col-md-3 d-inline-block">
+
+                    <p>{{carret.nom}}</p>
+                
+                </div>
+
+                <hr>
             </div>
+
+        </div>
 
             <div class="pt-3 w-100">
 
-                <a href="http://www.f.dawman.info/#/inici"><button class="btn btn-primary">Tornar a inici</button></a> 
-                <button class="btn btn-info float-right"><i class="fas fa-file-pdf"></i> Descarrega entrades</button>
+                <button class="btn btn-primary">Tornar a inici</button>
+                <button class="btn btn-info float-right">
+                    <i class="fas fa-file-pdf"></i> Descarrega entrades</button>
             </div>
 
 
         </div>
 
-       
+
 
     </div>
 
