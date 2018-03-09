@@ -1,9 +1,20 @@
-<div class="container pt-4" id="compres">
+<div class="container pt-4" id="compres" style="min-height:500px">
 
-  <h1>
-    <i class="fas fa-shopping-cart"></i> Carret de compra</h1>
+  <div class="w-100">
+
+<div class="col-6 col-md-6 d-inline-block">
+    <h1><i class="fas fa-shopping-cart"></i> Carret de compra</h1>
+</div><div class="col-6 col-md-6 d-inline-block pt-3">
+
+    <button type="button" class="btn btn-link float-right" (click)="buidarCarret()">Buidar <i class="fas fa-trash-alt"></i></button>
+</div>
+
+
+  
+
   <hr>
-  <div *ngIf="preu>0" class="w-100">
+</div>
+  <div *ngIf="preu>0" class="w-100 pt-4">
   <div class="col-md-12 col-12" style="border-bottom:solid 1px">
 
     <div class="col-md-10 col-8 d-inline-block">
@@ -21,7 +32,7 @@
       <hr>
 
       <div class="col-md-10 col-8 d-inline-block">
-        <div class="col-md-12 col-12"><h5>{{carret.titol}}</h5></div>
+        <div class="col-md-12 col-12"><h5><strong>{{carret.titol}}</strong></h5></div>
 
 
         <div class="col-md-12 col-12"><p>Data: {{carret.data}} | Hora {{carret.hora}} | Sala: {{carret.nom}}</p></div>
@@ -50,15 +61,18 @@
       </div>
   
     </div>
-    <div class="col-12 col-md-12 pb-4">
+    <div class="row pb-4 pt-4">
 
-      <div class="col-md-6 col-12 d-inline-block align-top">
+      <div class="col-md-4 col-12 d-inline-block align-top">
     
-          <button class="btn btn-danger" (click)=buidarCarret();>Buidar Carret</button>
-          <a href="http://www.f.dawman.info/#/espectacles"><button class="btn btn-primary">Seguir comprant</button></a>  
+          
+          <button class="btn btn-primary btn-lg btn-block" [routerLink]="['espectacles']" style="color:black;border-radius:0;line-height:2;border-color: #eebe3b; background-color:#eebe3b">Seguir comprant</button>
     
-      </div><div class="col-md-6 col-12 d-inline-block">
-          <button class="btn btn-success btn-lg float-right" [routerLink]="['registre']">Pagar</button>
+      </div><div class="col-md-4 d-inline-block">
+
+
+      </div><div class="col-md-4 col-12 d-inline-block">
+          <button class="btn btn-success float-right btn-lg btn-block" style="line-height:2;border-radius:0;" [routerLink]="['registre']">Pagar</button>
       </div>
     </div>
       
@@ -67,9 +81,18 @@
 </div>
 
 
-  <div *ngIf="preu==0" class="col-md-12-col-12">
+  <div *ngIf="preu==0" class="col-md-12-col-12 pb-2">
 
-    <p>No tens res, compra ostia</p>
+    <p class="pb-4">El carret està buit.</p>
+
+    <div class="row">
+    <div class="col-md-4 col-12">
+      <button class="btn btn-primary btn-lg btn-block" [routerLink]="['/espectacles']" style="color:black;border-radius:0;line-height:2;border-color: #eebe3b; background-color:#eebe3b">Seguir comprant</button>
+
+    </div>
+  </div>
+  <br>
+    
   </div>
 
 
