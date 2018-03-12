@@ -98,7 +98,7 @@ export class RegistreComponent implements OnInit {
     $(document).ready(function () {
 
 
-      $("#pais").change(function () {
+     /* $("#pais").change(function () {
         var num = $("#pais").val();
 
         //alert(num);
@@ -124,7 +124,7 @@ export class RegistreComponent implements OnInit {
         });
 
 
-      });
+      });*/
       $("#comunitat").change(function () {
         var nom = $("#comunitat").val();
 
