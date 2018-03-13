@@ -39,7 +39,7 @@ export class DetallEspectacleComponent implements OnInit {
 
 
   enviarFormulari() {
-    alert(this.formulari);
+
     console.log(this.formulari);
     this.espectacle.altaComentari(this.formulari);
     window.location.reload();
