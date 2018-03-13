@@ -39,6 +39,7 @@ export class DetallEspectacleComponent implements OnInit {
 
 
   enviarFormulari() {
+    alert(this.formulari);
     console.log(this.formulari);
     this.espectacle.altaComentari(this.formulari);
     window.location.reload();
@@ -54,14 +55,6 @@ export class DetallEspectacleComponent implements OnInit {
     this.llistaEspectacle(this.id);
 
     $(document).ready(function() {
-
-      $("#obri").hide();
-
-      $("#clicka").click(function() {
-        $("#obri").toggle("slow", function() {
-          // Animation complete.
-        });
-      });
 
       $("#anonymous").change(function() {
 

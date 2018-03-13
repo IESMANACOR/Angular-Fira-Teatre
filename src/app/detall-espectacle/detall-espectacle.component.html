@@ -15,39 +15,49 @@
     <div *ngFor='let espectacle of detallEspectacle?.detalls; ' class="col-12 col-md-8 d-inline-block align-top">
 
       <p *ngFor='let espectacle of detallEspectacle?.detalls;' class="d-inline-block titolEspectacle text-center col-md-12"> {{espectacle.titol}}</p>
+      <p class="d-inline-block col-md-6 subtitolEspectacle" *ngFor='let companyia of detallEspectacle?.companyia'> {{companyia.nomCompanyia}}</p>
+      <p class="d-inline-block col-md-5 subtitolEspectacleDret" *ngFor='let genere of detallEspectacle?.genere'> {{genere.nomGenere}}</p>
 
       <br>
 
-
-      <p class=" textEspectacle ">Sinòpsi :</p>
       <p class="textEspectacle font-weight-bold" *ngFor='let espectacle of detallEspectacle?.detalls'> {{espectacle.sinopsi}}</p>
 
 
-      <ul style="background-color: #EEBE3B" class="col-md-12 pl-2">
+      <ul style="" class="col-md-12 pl-2 detallsExtra">
 
         <li class="textEspectacle d-inline-block font-weight-bold"><i class="fas fa-clock"></i> {{espectacle.duracio}} min </li>
         <li class="textEspectacle d-inline-block font-weight-bold"><i class="fas fa-users"></i> {{espectacle.edatRecomanada}} </li>
         <li class="textEspectacle d-inline-block font-weight-bold"><i class="fas fa-ticket-alt"></i> {{espectacle.preu}} <i class="fas fa-euro-sign"></i></li><br>
 
         <li class="textEspectacle d-inline-block">Gènere : </li>
-        <li class="d-inline-block font-weight-bold" *ngFor='let genere of detallEspectacle?.genere'> {{genere.nomGenere}}</li><br>
+        <li class="d-inline-block" *ngFor='let genere of detallEspectacle?.genere'> {{genere.nomGenere}}</li><br>
         <li class="textEspectacle d-inline-block">Tipus d'espectacle : </li>
-        <li class="d-inline-block font-weight-bold" *ngFor='let tipus of detallEspectacle?.tipus'> {{tipus.nomTipus}}</li><br>
+        <li class="d-inline-block" *ngFor='let tipus of detallEspectacle?.tipus'> {{tipus.nomTipus}}</li><br>
         <li class="textEspectacle d-inline-block">Companyía :</li>
-        <li class="d-inline-block font-weight-bold" *ngFor='let companyia of detallEspectacle?.companyia'> {{companyia.nomCompanyia}}</li><br>
+        <li class="d-inline-block" *ngFor='let companyia of detallEspectacle?.companyia'> {{companyia.nomCompanyia}}</li><br>
+
+        <div class=" col-md-12 d-inline-block align-top divDirectors">
+
+          <div class="col-md-6 d-inline-block">
+            <p>Director : </p>
+            <p class="pl-2 font-weight-bold" *ngFor='let espectacle of detallEspectacle?.director'> {{espectacle.nom}} {{espectacle.llinatge1}} {{espectacle.llinatge2}}</p>
+          </div>
+
+          <div class="col-md-6 d-inline-block align-top float-right">
+
+          <p>Actors : </p>
+          <ul class="actors" id="sessions">
+            <li class="actors font-weight-bold" *ngFor='let espectacle of detallEspectacle?.actor'>{{espectacle.nom}} {{espectacle.llinatge1}} {{espectacle.llinatge2}}</li>
+          </ul>
+        </div>
+        </div>
+
       </ul>
 
     </div>
     <div class="col-12 col-md-0 d-inline-block align-top">
       <br>
 
-      <p>Director : </p>
-      <p class="pl-2 font-weight-bold" *ngFor='let espectacle of detallEspectacle?.director'> {{espectacle.nom}} {{espectacle.llinatge1}} {{espectacle.llinatge2}}</p>
-
-      <p>Actors : </p>
-      <ul class="actors" id="sessions">
-        <li class="actors font-weight-bold" *ngFor='let espectacle of detallEspectacle?.actor'>{{espectacle.nom}} {{espectacle.llinatge1}} {{espectacle.llinatge2}}</li>
-      </ul>
     </div>
   </div>
   <div class="d-inline-block col-12 col-md-12">
@@ -57,7 +67,6 @@
     <div class="col-0 col-md-1 d-inline-block"></div>
     <div class="col-12 col-md-10 d-inline-block">
       <h2 class="font-weight-bold d-inline-block">Selecciona la teva sessio : </h2>
-      <p id="clicka" class="sessionsPassades d-inline-block">(fes click aqui per veure les sessions passades)</p><br>
       <table width="100%">
         <tr>
           <th>Data</th>
@@ -80,11 +89,7 @@
           <td><a (click)="postProfile(sessio)" href="http://www.f.dawman.info/#/carret"><button disabled class="btn ">Seleccionar</button></a></td>
         </tr>
       </table>
-      <br>
-      <div id="obri">
-        <h2>Sessions Anteriors :</h2>
-        <p *ngFor='let sessio of detallEspectacle?.sessionsPassades'>Data : {{sessio.dataBona}} | Hora : {{sessio.hora}}</p>
-      </div>
+
     </div>
     <div class="col-0 col-md-1 d-inline-block"></div>
   </div>
@@ -104,9 +109,8 @@
               <input type="checkbox" name="anon" id="anonymous"> Usuari anònim <br><br>
               <textarea type="text" class="form-control col-md-12 col-12" name="comentari" formControlName="comentari" placeholder="Inserti el seu comentari..." rows="5" required></textarea><br>
 
-              <div *ngFor='let salasessio of detallEspectacle?.detalls' class="col-12">
+              <div *ngFor='let espectacle of detallEspectacle?.detalls' class="col-0">
                 <input type="hidden" formControlName="codiEspectacle" value="{{espectacle.codi}}">
-                <h1>{{espectacle.codi}}</h1>
               </div>
               <div *ngIf="!formulari.valid">
                 <p class="text-danger">*Ompl tots els camps</p>

@@ -18,7 +18,7 @@ export class DetallService {
 
   altaComentari(user:any) {
 
-
+alert(user);
    return this.http.post('http://www.f.dawman.info/rest/public/espectacle/comentar/', user)
    .subscribe(res => console.log(res));
 

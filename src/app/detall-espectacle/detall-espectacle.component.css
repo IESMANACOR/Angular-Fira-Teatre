@@ -9,9 +9,29 @@
   text-decoration-color: #EEBE3B;
 }
 
+.subtitolEspectacle {
+  font-size: 24px;
+  padding-left: 38%;
+  color: #aaaaaa;
+}
+.subtitolEspectacleDret {
+  font-size: 24px;
+  color: #aaaaaa;
+  padding-left: 4%;
+  vertical-align: top !important;
+}
+ul.detallsExtra{
+
+    background-color: #EEBE3B
+  
+}
+
 .textEspectacle {
   padding: 1%;
   padding-left: 6%;
+}
+.divDirectors{
+  padding-left: 60px;
 }
 
 .sessionsPassades {
