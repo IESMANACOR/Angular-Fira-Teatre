@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DetallService } from './detall-espectacle.service';
-import { ActivatedRoute } from '@angular/router';
 import { NgForm, FormControl, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { RouterModule, Router, ActivatedRoute } from '@angular/router';
 
 declare var jquery: any;
 declare var $: any;
