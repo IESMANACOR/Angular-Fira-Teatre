@@ -88,6 +88,20 @@
           <td>{{sessionsPassades.nom}}</td>
           <td><a (click)="postProfile(sessio)" href="http://www.f.dawman.info/#/carret"><button disabled class="btn ">Seleccionar</button></a></td>
         </tr>
+        <tr *ngFor='let sessionsPassades of detallEspectacle?.sessionsPassades2'>
+          <td>{{sessionsPassades.dataBona}}</td>
+          <td>{{sessionsPassades.hora}}</td>
+          <td class="text-center vermell">No</td>
+          <td>{{sessionsPassades.nom}}</td>
+          <td><a (click)="postProfile(sessio)" href="http://www.f.dawman.info/#/carret"><button disabled class="btn ">Seleccionar</button></a></td>
+        </tr>
+        <tr *ngFor='let sessionsPassades of detallEspectacle?.sessionsPassades3'>
+          <td>{{sessionsPassades.dataBona}}</td>
+          <td>{{sessionsPassades.hora}}</td>
+          <td class="text-center vermell">No</td>
+          <td>{{sessionsPassades.nom}}</td>
+          <td><a (click)="postProfile(sessio)" href="http://www.f.dawman.info/#/carret"><button disabled class="btn ">Seleccionar</button></a></td>
+        </tr>
       </table>
 
     </div>
