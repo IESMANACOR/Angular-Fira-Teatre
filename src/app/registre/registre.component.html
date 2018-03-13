@@ -31,14 +31,7 @@
 						<label for="pais">Pais*</label>
 						<select class="form-control" id="pais" formControlName="pais" required>
 								<option selected="true" disabled="disabled">Pais</option>  
-								<option *ngFor="let pais of paisos" value="{{pais.codi}}">
-	
-										{{pais.nom}}
-			
-			
-			
-			
-									</option>
+								<option value="1">Espanya</option>
 						</select>
 					</div>
 				
@@ -46,7 +39,8 @@
 				<div class="col-md-3">
 						<label for="comunitat">Comunitat Autònoma*</label>
 						<select class="form-control" id="comunitat" formControlName="comunitat" required>
-								
+								<option selected="true" disabled="disabled">Comunitat</option>  
+								<option value="1">Illes Balears</option>
 								
 							
 						</select>
