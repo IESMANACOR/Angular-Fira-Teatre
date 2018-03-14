@@ -7,7 +7,7 @@ export class DetallService {
   constructor(private http: Http, private http2: HttpClient) { }
 
   detallEspectacle(id) {
-    return this.http.get('http://www.f.dawman.info/rest/public/espectacle/1/'+ id)
+    return this.http.get('http://www.f.dawman.info/rest/public/espectacle/2/'+ id)
       .toPromise()
       .then(resposta => resposta.json())
       .catch(this.errada)

@@ -8,31 +8,33 @@
   text-decoration: underline;
   text-decoration-color: #EEBE3B;
 }
-
+.sinopsi{
+  font-size: 17px;
+}
 .subtitolEspectacle {
   font-size: 24px;
-  padding-left: 38%;
   color: #aaaaaa;
 }
-.subtitolEspectacleDret {
-  font-size: 24px;
-  color: #aaaaaa;
-  padding-left: 4%;
-  vertical-align: top !important;
-}
-ul.detallsExtra{
 
-    background-color: #EEBE3B
-  
+.botoselect{
+  background-color: black;
+  color: white;
+}
+.botoselect:hover{
+  background-color: white;
+  color: black;
+}
+
+
+ul.detallsExtra {
+  background-color: #EEBE3B
 }
 
 .textEspectacle {
   padding: 1%;
-  padding-left: 6%;
+  padding-left: 16%;
 }
-.divDirectors{
-  padding-left: 60px;
-}
+
 
 .sessionsPassades {
   font-size: 13px;
@@ -88,17 +90,17 @@ main {
 .ancles {
   list-style: none;
   display: inline-block;
-
 }
 
-.llistaancles{
-padding-left: 5%
+.llistaancles {
+  padding-top: 3%;
+  padding-left: 5%
 }
 
-.verd{
+.verd {
   color: green;
 }
 
-.vermell{
-  color:red;
+.vermell {
+  color: red;
 }
