@@ -11,6 +11,7 @@ import {DetallEspectacleComponent} from './detall-espectacle/detall-espectacle.c
 import { ResumComponent } from './resum/resum.component';
 import { QuisomComponent } from './quisom/quisom.component';
 import { RegistreUsuariComponent } from './registre-usuari/registre-usuari.component';
+import { UsuariComponent } from './usuari/usuari.component';
 
 
 
@@ -21,6 +22,8 @@ const APP_ROUTES: Routes=[
 {path:'formulari',component:FormulariComponent},
 // {path:'comprar',component:ComprarComponent},
 {path: 'quisom', component: QuisomComponent },
+{path: 'usuari', component: UsuariComponent },
+
 {path:'inici',component:HomeComponent},
 {path:'carret',component:CarretComponent},
 {path:'calendari',component:Calendari2Component},

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgIf } from '@angular/common';
 
 declare var jquery:any;
 declare var $ :any;
@@ -10,13 +11,21 @@ declare var $ :any;
 })
 export class HeaderComponent implements OnInit {
 
+  usuario:any;
+
   constructor() { 
 
     $(document).ready(function(){
+      
+      $(".nav a").on("click", function(){
+        $("#navbarText").removeClass("show");
+     });
+
       if( $(window).width() < 500){
         $(".navElement").css("font-size","16px");
         $(".scrolled").css("background-color","black !important");
         $("#redesSociales").hide();
+        $("#redesSociales1").hide();
        } ;
       
        $(window).scroll(function(){
@@ -69,7 +78,7 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit() {
-
+    this.usuario = (localStorage.getItem('usuario') != undefined)?JSON.parse(localStorage.getItem('usuario')):null;
     this.contarEntrada();
   
   }

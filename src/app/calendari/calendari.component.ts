@@ -41,7 +41,7 @@ export class CalendariComponent implements OnInit {
           right: 'list'
         },
   
-        defaultDate: '2018-02-12',
+        
 
         defaultView: 'listWeek',
 

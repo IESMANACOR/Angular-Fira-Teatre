@@ -1,0 +1,33 @@
+<form #f="ngForm" (ngSubmit)="login(f) " class="container" >
+  <div class="form-group row" *ngIf="usuario == null">
+      <label for="userName" class="col-12 col-form-label">Nombre de suario</label>
+      <div class="col-12">
+          <input type="text" name="correu" class="form-control" placeholder="Nomber de usuario" ngModel #correu="ngModel">
+      </div>
+  </div>
+  <div class="form-group row" *ngIf="usuario == null">
+      <label for="pass" class="col-12 col-form-label">Contraseña</label>
+      <div class="col-12">
+          <input type="password" name="contrasenya" class="form-control" placeholder="Contraseña" ngModel #contrasenya="ngModel">
+      </div>
+  </div>
+  <div class="form-group row">
+
+
+      <div class="col-12 m-0 d-flex justify-content-end" *ngIf="usuario == null;else nolog">
+          <input class="btn btn-primary col-12 col-sm-auto ml-2" type="submit" value="Iniciar sessió">
+          
+          <input class="btn btn-success col-12 col-sm-auto ml-2" type="button"  value="registrar">
+
+          <input class="btn btn-link col-12 col-sm-auto" type="button" (click)='recuperar(f)' value="Recuperar contrasenya">
+      </div>
+      
+      <ng-template #nolog>
+            <div class="col-12 m-0 d-flex justify-content-end" *ngIf="usuario != null;else nolog">
+                    <input class="btn btn-danger col-12 col-sm-auto mt-5" type="button" (click)='logout()' value="Tencar sessió">
+                </div>
+      </ng-template>
+  </div>
+</form>
+
+

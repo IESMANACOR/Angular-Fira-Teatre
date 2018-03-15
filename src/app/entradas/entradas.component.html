@@ -1,0 +1,17 @@
+<div class="container mb-5">
+  <h2>Entrades</h2>
+  <div class="conpm i angular-qrcode-itntainer mb-2" *ngFor="let noms of entrada">
+    <div class="row " style="margin: 0px; background: #ffffff9c; border-bottom:1px solid #000000; ">
+     
+     
+        <h5 class="col-12 col-md-3 line"><i class="fab fa-amilia fa mr-2" style="color:#eebe3b !important;"></i>Titol:{{noms.titol}}</h5>
+        <h5 class="col-12 col-md-3 line"><i class="far fa-calendar-alt fa mr-2" style="color:#eebe3b !important;"></i>data:{{noms.data}}</h5>
+        <h5 class="col-12 col-md-3 line"><i class="far fa-clock fa mr-2" style="color:#eebe3b !important;"></i>hora:{{noms.hora}}</h5>
+        <ngx-qrcode class="ml-5" [qrc-element-type]="elementType" qrc-value='{{noms.hora}}{{noms.codi}}{{noms.data}}'>
+        </ngx-qrcode>
+    </div>
+
+
+
+  </div>
+</div>

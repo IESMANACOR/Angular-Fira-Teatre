@@ -40,6 +40,12 @@ import { ResumComponent } from './resum/resum.component';
 import { QuisomComponent } from './quisom/quisom.component';
 import { RegistreUsuariComponent } from './registre-usuari/registre-usuari.component';
 
+import { ComprasUsuariComponent } from './compras-usuari/compras-usuari.component';
+import { EntradasComponent } from './entradas/entradas.component';
+
+import { PerfilComponent } from './perfil/perfil.component';
+import { UsuariComponent } from './usuari/usuari.component'
+import { NgxQRCodeModule } from 'ngx-qrcode3';
 const routes: Routes = [
 
 ];
@@ -64,7 +70,13 @@ const routes: Routes = [
     DetallEspectacleComponent,
     ResumComponent,
     QuisomComponent,
-    RegistreUsuariComponent
+    RegistreUsuariComponent,
+    ComprasUsuariComponent,
+   
+    EntradasComponent,
+    PerfilComponent,
+   
+    UsuariComponent
   ],
   imports: [
     BrowserModule,
@@ -73,6 +85,7 @@ const routes: Routes = [
     FormsModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    NgxQRCodeModule,
   // FullCalendarModule,
    ReactiveFormsModule,
    NgbModule,
@@ -86,6 +99,7 @@ const routes: Routes = [
     CarretService,
     RegistreUsuariService,
     FormulariService],
+    
   bootstrap: [AppComponent],
 
 })

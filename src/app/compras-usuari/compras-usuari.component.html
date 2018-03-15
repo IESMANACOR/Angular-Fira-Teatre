@@ -1,0 +1,19 @@
+<div  class="container mt-3 mb-5">
+    <h2>Compres</h2>
+    <div *ngFor="let noms of compra">
+        
+        <div style="margin: 0px; background: #ffffff9c; border-bottom:1px solid #000000; " class="row ph-1 pb-1 mb-4">
+            <h5 class="mr-0 col-md-3 col-12" ><i class="fas fa-hashtag fa mr-2" style="color:#eebe3b !important;"></i> Codi compra: {{noms.codi}}</h5>
+            
+            <h5 class="mr-0 col-md-3 col-12"> <i class="far fa-calendar-alt fa mr-2" style="color:#eebe3b !important;"></i> Data: {{noms.data}}</h5>
+               
+            <h5 class="mr-0 col-md-3 col-12"> <i class="far fa-clock fa mr-2" style="color:#eebe3b !important;"></i> Hora: {{noms.hora}} </h5>
+            
+            <h5 class="mr-0 col-md-2 col-12"><i class="fas fa-dollar-sign fa mr-2" style="color:#eebe3b !important;"></i> Total: {{noms.preuTotal}}€</h5>
+            
+            
+
+                
+        </div>
+    </div>
+</div>

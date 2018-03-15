@@ -36,10 +36,6 @@ font-weight: bold;
   border-bottom: rgb(218, 175, 58) 3px solid;
 
 }
-.active-c{
-  color: rgb(218, 175, 58);
-
-}
 .navElement:active{
 color:rgb(220, 238, 59)  !important;
 }
@@ -137,4 +133,3 @@ list-style-type: none;
     color: white;
     text-align: center;
   }
-
