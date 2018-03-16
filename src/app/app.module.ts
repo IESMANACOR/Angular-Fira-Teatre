@@ -86,7 +86,7 @@ const routes: Routes = [
     FormsModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    NgxQRCodeModule,
+    
   // FullCalendarModule,
    ReactiveFormsModule,
    NgbModule,
