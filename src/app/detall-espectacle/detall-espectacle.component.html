@@ -8,14 +8,14 @@
     <div class="col-md-1 col-0 d-inline-block">
     </div><div class="col-12 col-md-4 d-inline-block">
 
-      <img style="width: 60%;" src="/imatges/{{detallEspectacle?.detalls[0].codi}}/{{detallEspectacle?.detalls[0].foto}}" alt="foto">
+      <img style="width: 100%;" src="/imatges/{{detallEspectacle?.detalls[0].codi}}/{{detallEspectacle?.detalls[0].foto}}" alt="foto">
 
-</div><div class="col-md-1 col-0 d-inline-block"></div><!--
+</div><div class="col-md-0 col-0 d-inline-block"></div><!--
 --><div *ngFor='let espectacle of detallEspectacle?.detalls; ' class="col-12 col-md-5 d-inline-block align-top">
-    <p *ngFor='let espectacle of detallEspectacle?.detalls;' class="d-inline-block titolEspectacle text-uppercase col-md-12"> {{espectacle.titol}}</p>
-    <p class="d-inline-block col-md-4 subtitolEspectacle" *ngFor='let companyia of detallEspectacle?.companyia'> {{companyia.nomCompanyia}}</p><!--
-      --><p class="d-inline-block col-md-4 subtitolEspectacle" *ngFor='let companyia of detallEspectacle?.companyia'></p><!--
-    --><p class="d-inline-block col-md-4 subtitolEspectacle" *ngFor='let espectacle of detallEspectacle?.detalls'> {{espectacle.preu}} €</p>
+    <p *ngFor='let espectacle of detallEspectacle?.detalls;' class="d-inline-block titolEspectacle text-uppercase col-md-12 pl-0"> {{espectacle.titol}}</p>
+    <p class="d-inline-block col-md-8 subtitolEspectacle pl-0" *ngFor='let companyia of detallEspectacle?.companyia'> {{companyia.nomCompanyia}}</p><!--
+    --><p class="d-inline-block col-md-0 subtitolEspectacle" *ngFor='let companyia of detallEspectacle?.companyia'></p><!--
+    --><p class="d-inline-block col-md-4 subtitolEspectacle" *ngFor='let espectacle of detallEspectacle?.detalls'><i class="fas fa-ticket-alt"></i>  {{espectacle.preu}} €</p>
 
       <br>
 
@@ -24,9 +24,9 @@
 
       <ul style="" class="col-md-12 pl-2 detallsExtra">
 
-        <li class="textEspectacle d-inline-block font-weight-bold"><i class="fas fa-clock"></i> {{espectacle.duracio}} min </li>
         <li class="textEspectacle d-inline-block font-weight-bold"><i class="fas fa-users"></i> {{espectacle.edatRecomanada}} </li>
-        <li class="textEspectacle d-inline-block font-weight-bold"><i class="fas fa-ticket-alt"></i> {{espectacle.preu}} <i class="fas fa-euro-sign"></i></li><br>
+        <li class="textEspectacle d-inline-block font-weight-bold"><i class="fas fa-clock"></i> {{espectacle.duracio}} min </li>
+        <!-- <li class="textEspectacle d-inline-block font-weight-bold"><i class="fas fa-ticket-alt"></i> {{espectacle.preu}} <i class="fas fa-euro-sign"></i></li><br> -->
 <br>
         <div class="col-md-6 d-inline-block">
           <li class="d-inline-block" *ngFor='let genere of detallEspectacle?.genere'>Gènere : {{genere.nomGenere}}</li><br>
@@ -54,7 +54,7 @@
 
       </ul>
 
-    </div><div class="col-md-1"></div>
+    </div><div class="col-md-2"></div>
   </div>
   <div class="d-inline-block col-12 col-md-12">
     <br>
@@ -68,12 +68,14 @@
           <th>Data</th>
           <th>Hora</th>
           <th>Disponible</th>
+          <th>Seients Disponibles</th>
           <th>Sala</th>
         </tr>
         <tr *ngFor='let sessio of detallEspectacle?.sessio' class="border-bottom">
           <td>{{sessio.dataBona}}</td>
           <td>{{sessio.horaBona}}</td>
           <td class=" verd">Si</td>
+          <td>{{sessio.seientsDisponibles}}</td>
           <td>{{sessio.nom}}</td>
           <td><a (click)="postProfile(sessio)" href="http://www.f.dawman.info/#/carret"><button class="btn botoselect">Seleccionar</button></a></td>
         </tr>
@@ -81,6 +83,7 @@
           <td>{{sessionsPassades.dataBona}}</td>
           <td>{{sessionsPassades.horaBona}}</td>
           <td class=" vermell">No</td>
+          <td>{{sessionsPassades.seientsDisponibles}}</td>
           <td>{{sessionsPassades.nom}}</td>
           <td><a (click)="postProfile(sessio)" href="http://www.f.dawman.info/#/carret"><button disabled class="btn ">Seleccionar</button></a></td>
         </tr>
@@ -88,6 +91,7 @@
           <td>{{sessionsPassades.dataBona}}</td>
           <td>{{sessionsPassades.horaBona}}</td>
           <td class=" vermell">No</td>
+          <td>{{sessionsPassades.seientsDisponibles}}</td>
           <td>{{sessionsPassades.nom}}</td>
           <td><a (click)="postProfile(sessio)" href="http://www.f.dawman.info/#/carret"><button disabled class="btn ">Seleccionar</button></a></td>
         </tr>
@@ -95,6 +99,7 @@
           <td>{{sessionsPassades.dataBona}}</td>
           <td>{{sessionsPassades.horaBona}}</td>
           <td class=" vermell">No</td>
+          <td>{{sessionsPassades.seientsDisponibles}}</td>
           <td>{{sessionsPassades.nom}}</td>
           <td><a (click)="postProfile(sessio)" href="http://www.f.dawman.info/#/carret"><button disabled class="btn ">Seleccionar</button></a></td>
         </tr>
