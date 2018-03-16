@@ -45,7 +45,8 @@ import { EntradasComponent } from './entradas/entradas.component';
 
 import { PerfilComponent } from './perfil/perfil.component';
 import { UsuariComponent } from './usuari/usuari.component'
-import { NgxQRCodeModule } from 'ngx-qrcode3';
+
+
 const routes: Routes = [
 
 ];
@@ -72,10 +73,10 @@ const routes: Routes = [
     QuisomComponent,
     RegistreUsuariComponent,
     ComprasUsuariComponent,
-   
+
     EntradasComponent,
     PerfilComponent,
-   
+
     UsuariComponent
   ],
   imports: [
@@ -93,13 +94,13 @@ const routes: Routes = [
 
   ],
   providers: [DetallService,
-    EspectacleService, 
+    EspectacleService,
     RegistreService,
     ComprarService,
     CarretService,
     RegistreUsuariService,
     FormulariService],
-    
+
   bootstrap: [AppComponent],
 
 })
